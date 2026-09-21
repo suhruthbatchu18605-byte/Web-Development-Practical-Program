@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List Application Mini Project - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>To-Do List Application Mini Project</h1>
+    <p class="program-desc">Full-featured to-do app with active/completed filter badges and localStorage persistence.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="max-width:440px; margin:0 auto;"><div style="display:flex; gap:0.5rem; margin-bottom:1rem;"><input type="text" id="todoPInput" class="input-field" placeholder="Add task..."><button class="btn btn-primary" onclick="addTodoP()">Add</button></div><ul id="todoPList" style="list-style:none;"></ul></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-108</p>
+  </footer>
+
+  <script>
+function addTodoP() { const inp = document.getElementById('todoPInput'); const v = inp.value.trim(); if (!v) return; const li = document.createElement('li'); li.style.cssText = "display:flex; justify-content:space-between; background:#0b1120; padding:0.5rem 1rem; border-radius:6px; margin-bottom:0.4rem;"; li.innerHTML = `<span>${v}</span><button class="btn btn-danger" style="padding:0.2rem 0.5rem; font-size:0.75rem;" onclick="this.parentElement.remove()">X</button>`; document.getElementById('todoPList').appendChild(li); inp.value = ''; }
+  </script>
+</body>
+</html>

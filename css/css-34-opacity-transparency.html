@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Opacity vs RGBA Transparency - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>CSS Opacity vs RGBA Transparency</h1>
+    <p class="program-desc">Comparison between `opacity` (which affects all children) and `rgba()` background transparency (which preserves child opacity).</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+         <div style="opacity: 0.5; background: #4f46e5; padding: 1.5rem; border-radius: 8px; color: white; font-weight: bold;">
+           opacity: 0.5<br>(Text is also transparent)
+         </div>
+         <div style="background: rgba(79, 70, 229, 0.5); padding: 1.5rem; border-radius: 8px; color: white; font-weight: bold;">
+           rgba(79, 70, 229, 0.5)<br>(Text stays 100% opaque)
+         </div>
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-34</p>
+  </footer>
+
+</body>
+</html>

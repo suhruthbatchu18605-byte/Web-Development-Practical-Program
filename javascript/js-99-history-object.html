@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History Object Demonstration - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>History Object Demonstration</h1>
+    <p class="program-desc">Demonstrates browser history length and navigation methods: back(), forward(), and go().</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <button class="btn btn-primary" onclick="demoHistory()">Inspect History</button><div class="output-box" id="output">Click to inspect...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-99</p>
+  </footer>
+
+  <script>
+function demoHistory() { document.getElementById('output').textContent = `History Stack Length: ${history.length} pages`; }
+  </script>
+</body>
+</html>

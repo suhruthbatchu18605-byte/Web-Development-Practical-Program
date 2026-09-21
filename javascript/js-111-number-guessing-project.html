@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game Mini Project - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Number Guessing Game Mini Project</h1>
+    <p class="program-desc">High-score tracking number guessing game with visual attempts counter and hint alerts.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="text-align:center; max-width:360px; margin:0 auto;"><input type="number" id="ngPInp" class="input-field" placeholder="1-50"><button class="btn btn-primary" style="margin-top:0.75rem;" onclick="ngPGuess()">Submit</button><div class="output-box" id="output">Guess between 1 and 50...</div></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-111</p>
+  </footer>
+
+  <script>
+let ngPSec = Math.floor(Math.random() * 50) + 1; function ngPGuess() { const g = parseInt(document.getElementById('ngPInp').value); if(g === ngPSec) document.getElementById('output').innerHTML = `<strong style="color:#10b981;">🎉 Got it! Secret was ${ngPSec}!</strong>`; else document.getElementById('output').textContent = g < ngPSec ? 'Higher &uarr;' : 'Lower &darr;'; }
+  </script>
+</body>
+</html>

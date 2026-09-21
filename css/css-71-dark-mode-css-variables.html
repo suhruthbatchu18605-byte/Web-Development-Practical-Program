@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Webpage Using CSS Variables - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>Dark Mode Webpage Using CSS Variables</h1>
+    <p class="program-desc">Instant theme switcher toggling between dark mode and light mode palettes using CSS Custom Properties.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card" id="darkmode-container">
+       <style>
+         .theme-light { --bg-demo: #f8fafc; --text-demo: #0f172a; --card-demo: #e2e8f0; }
+         .theme-dark { --bg-demo: #0b1120; --text-demo: #f8fafc; --card-demo: #1e293b; }
+         .theme-preview-box { background: var(--bg-demo, #0b1120); color: var(--text-demo, #f8fafc); padding: 1.5rem; border-radius: 8px; transition: all 0.3s; }
+       </style>
+       <div class="theme-preview-box theme-dark" id="theme-box">
+         <h4>Dynamic Theme Preview</h4>
+         <p>Demonstrating seamless color theme switching with CSS Variables.</p>
+       </div>
+       <div style="display: flex; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
+         <button class="btn btn-secondary" onclick="document.getElementById('theme-box').className='theme-preview-box theme-light'">Light Mode</button>
+         <button class="btn btn-primary" onclick="document.getElementById('theme-box').className='theme-preview-box theme-dark'">Dark Mode</button>
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-71</p>
+  </footer>
+
+</body>
+</html>

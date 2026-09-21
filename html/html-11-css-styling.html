@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpage with Internal and External CSS Styling - HTML Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to HTML Programs</a>
+    </div>
+    <h1>Webpage with Internal and External CSS Styling</h1>
+    <p class="program-desc">Demonstrates the syntax, application, and precedence between external stylesheet linkage (&lt;link&gt;) and internal embedded stylesheet (&lt;style&gt;).</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+
+      <div class="demo-card">
+        <h2 class="demo-title">Internal vs External CSS Styling</h2>
+        
+        <style>
+          /* Internal CSS specific to this demonstration */
+          .internal-box {
+            background: linear-gradient(135deg, #312e81, #1e1b4b);
+            border: 2px solid #6366f1;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            color: #e0e7ff;
+          }
+          .internal-highlight {
+            color: #38bdf8;
+            font-weight: bold;
+          }
+        </style>
+
+        <div class="internal-box">
+          <h3>Styled via Internal &lt;style&gt; Block</h3>
+          <p>This box is styled using an embedded <span class="internal-highlight">&lt;style&gt;</span> element placed directly in the HTML document head/body.</p>
+        </div>
+
+        <div style="background: #1e293b; border: 2px dashed #94a3b8; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+          <h3 style="color: #94a3b8;">Styled via External Stylesheet</h3>
+          <p>The main typography, dark background, buttons, and responsive grid in this document are controlled by external stylesheet <code>../assets/css/program.css</code>.</p>
+        </div>
+
+        <div style="background: rgba(239, 68, 68, 0.15); border: 2px solid #ef4444; padding: 1.5rem; border-radius: 10px; color: #fca5a5;">
+          <h3 style="color: #f87171;">Styled via Inline CSS Attribute</h3>
+          <p>This box is styled using the <code>style="..."</code> inline attribute, which has the highest specificity among CSS author styles.</p>
+        </div>
+      </div>
+
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to HTML Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; HTML Programs Section &bull; HTML-11</p>
+  </footer>
+
+</body>
+</html>

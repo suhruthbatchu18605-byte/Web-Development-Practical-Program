@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Application Mini Project - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Quiz Application Mini Project</h1>
+    <p class="program-desc">Interactive quiz application with automated question progression, feedback, and score tally.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="max-width:460px; margin:0 auto;"><h4 id="qTitle" style="color:#38bdf8;">Question 1 of 2</h4><p id="qText" style="margin:0.5rem 0 1rem;">Which HTML attribute specifies an alternate text for an image?</p><div id="qOpts" style="display:flex; flex-direction:column; gap:0.5rem;"></div><button class="btn btn-primary" id="qBtn" style="margin-top:1rem;" onclick="nextQ()">Next Question</button></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-110</p>
+  </footer>
+
+  <script>
+const qData = [{ q: "Which HTML attribute specifies alternate text for an image?", opts: ["alt", "src", "title"], ans: "alt" }, { q: "Which CSS property controls text size?", opts: ["font-size", "text-style", "font-weight"], ans: "font-size" }]; let qIdx = 0, qScore = 0; function renderQ() { if(qIdx >= qData.length) { document.getElementById('qTitle').textContent = "Quiz Finished!"; document.getElementById('qText').textContent = `Final Score: ${qScore} / ${qData.length}`; document.getElementById('qOpts').innerHTML = ''; document.getElementById('qBtn').style.display = 'none'; return; } const d = qData[qIdx]; document.getElementById('qTitle').textContent = `Question ${qIdx + 1} of ${qData.length}`; document.getElementById('qText').textContent = d.q; document.getElementById('qOpts').innerHTML = d.opts.map(o => `<label style="background:#0b1120; padding:0.5rem 1rem; border-radius:6px; border:1px solid var(--border); display:block; cursor:pointer;"><input type="radio" name="opt" value="${o}"> ${o}</label>`).join(''); } function nextQ() { const sel = document.querySelector('input[name="opt"]:checked')?.value; if(sel === qData[qIdx].ans) qScore++; qIdx++; renderQ(); } renderQ();
+  </script>
+</body>
+</html>

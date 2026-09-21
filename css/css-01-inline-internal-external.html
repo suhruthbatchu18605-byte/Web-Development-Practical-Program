@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inline, Internal, and External CSS - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>Inline, Internal, and External CSS</h1>
+    <p class="program-desc">Demonstrates the three methods of applying CSS styles: inline style attributes, internal &lt;style&gt; blocks, and external linked .css files, highlighting precedence rules.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>.internal-sample { color: #38bdf8; font-weight: bold; background: rgba(56, 189, 248, 0.1); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }</style>
+       <div class="internal-sample">1. Internal CSS (defined in document &lt;style&gt; element)</div>
+       <div style="color: #f59e0b; font-weight: bold; background: rgba(245, 158, 11, 0.1); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">2. Inline CSS (style="..." attribute directly on the tag)</div>
+       <div style="color: #10b981; font-weight: bold; background: rgba(16, 185, 129, 0.1); padding: 1rem; border-radius: 8px;">3. External CSS (loaded from assets/css/program.css)</div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-01</p>
+  </footer>
+
+</body>
+</html>

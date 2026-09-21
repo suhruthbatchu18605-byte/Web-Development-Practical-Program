@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage Using CSS Media Queries - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>Responsive Webpage Using CSS Media Queries</h1>
+    <p class="program-desc">Media queries targeting mobile (<600px), tablet (600px-900px), and desktop (>900px) screen sizes.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>
+         .mq-box { padding: 2rem; border-radius: 8px; text-align: center; font-weight: bold; }
+         @media (min-width: 900px) { .mq-box { background: #065f46; color: #a7f3d0; } .mq-box::after { content: ' - Desktop Viewport (>=900px)'; } }
+         @media (min-width: 600px) and (max-width: 899px) { .mq-box { background: #92400e; color: #fde68a; } .mq-box::after { content: ' - Tablet Viewport (600px-899px)'; } }
+         @media (max-width: 599px) { .mq-box { background: #991b1b; color: #fecaca; } .mq-box::after { content: ' - Mobile Viewport (<600px)'; } }
+       </style>
+       <div class="mq-box">Current Active Breakpoint</div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-16</p>
+  </footer>
+
+</body>
+</html>

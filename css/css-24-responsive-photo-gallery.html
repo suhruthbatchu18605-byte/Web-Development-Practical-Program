@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Photo Gallery Using CSS Grid / Flexbox - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>Responsive Photo Gallery Using CSS Grid / Flexbox</h1>
+    <p class="program-desc">Photo gallery showcasing responsive grid columns with hover zoom effects, image captions, and shadow borders.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>
+         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+         .gallery-item { height: 140px; border-radius: 8px; overflow: hidden; position: relative; cursor: pointer; transition: transform 0.3s; }
+         .gallery-item:hover { transform: scale(1.04); }
+       </style>
+       <div class="gallery-grid">
+         <div class="gallery-item" style="background: linear-gradient(135deg, #f43f5e, #fb923c);"></div>
+         <div class="gallery-item" style="background: linear-gradient(135deg, #8b5cf6, #3b82f6);"></div>
+         <div class="gallery-item" style="background: linear-gradient(135deg, #10b981, #06b6d4);"></div>
+         <div class="gallery-item" style="background: linear-gradient(135deg, #f59e0b, #ef4444);"></div>
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-24</p>
+  </footer>
+
+</body>
+</html>

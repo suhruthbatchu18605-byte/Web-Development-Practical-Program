@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Quiz Application - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Simple Quiz Application</h1>
+    <p class="program-desc">Multiple-choice question quiz with automated score computation.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div style="max-width: 500px; margin: 0 auto;">
+       <div id="quizContainer">
+         <p style="font-weight: bold; margin-bottom: 0.5rem;">Q: What does CSS stand for?</p>
+         <label><input type="radio" name="q1" value="A"> Creative Style Sheets</label><br>
+         <label><input type="radio" name="q1" value="B"> Cascading Style Sheets</label><br>
+         <label><input type="radio" name="q1" value="C"> Computer Style Sheets</label><br><br>
+
+         <p style="font-weight: bold; margin-bottom: 0.5rem;">Q: Inside which HTML element do we put JavaScript?</p>
+         <label><input type="radio" name="q2" value="A">&lt;script&gt;</label><br>
+         <label><input type="radio" name="q2" value="B">&lt;javascript&gt;</label><br>
+         <label><input type="radio" name="q2" value="C">&lt;js&gt;</label><br><br>
+
+         <button class="btn btn-primary" onclick="scoreQuiz()">Submit Answers</button>
+       </div>
+       <div class="output-box" id="quizOutput">Select answers and submit...</div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-32</p>
+  </footer>
+
+  <script>
+
+     function scoreQuiz() {
+       let score = 0;
+       const q1 = document.querySelector('input[name="q1"]:checked')?.value;
+       const q2 = document.querySelector('input[name="q2"]:checked')?.value;
+       if (q1 === 'B') score++;
+       if (q2 === 'A') score++;
+       document.getElementById('quizOutput').innerHTML = `<strong>Quiz Score: ${score} / 2</strong> (${score === 2 ? 'Excellent!' : 'Keep practicing!'})`;
+     }
+     
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects in JavaScript - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Objects in JavaScript</h1>
+    <p class="program-desc">Demonstrates object creation, dot vs bracket notation, methods, Object.keys(), and Object.entries().</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <button class="btn btn-primary" onclick="demoObjects()">Inspect Student Object</button>
+     <div class="output-box" id="output">Click to execute...</div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-19</p>
+  </footer>
+
+  <script>
+
+     function demoObjects() {
+       const student = {
+         name: "Suhruth Kotha",
+         rollNo: "21CS045",
+         department: "Computer Science",
+         semester: 4,
+         getDetails() { return `${this.name} (${this.rollNo}) - ${this.department}`; }
+       };
+       let out = `Object Summary: ${student.getDetails()}\n\n`;
+       out += `Object.keys: ${JSON.stringify(Object.keys(student))}\n`;
+       out += `Object.entries:\n` + Object.entries(student).filter(([k,v]) => typeof v !== 'function').map(([k,v]) => `  ${k}: ${v}`).join('\n');
+       document.getElementById('output').textContent = out;
+     }
+     
+  </script>
+</body>
+</html>

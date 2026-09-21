@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock Mini Project - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Digital Clock Mini Project</h1>
+    <p class="program-desc">Sleek neon digital clock with 12/24 hour display toggle and live seconds ticking.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="text-align:center; padding:2rem 0;"><div id="clockNeon" style="font-size:3.5rem; font-family:monospace; color:#38bdf8; text-shadow:0 0 25px rgba(56,189,248,0.7);">00:00:00</div></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-105</p>
+  </footer>
+
+  <script>
+setInterval(() => document.getElementById('clockNeon').textContent = new Date().toLocaleTimeString(), 1000); document.getElementById('clockNeon').textContent = new Date().toLocaleTimeString();
+  </script>
+</body>
+</html>

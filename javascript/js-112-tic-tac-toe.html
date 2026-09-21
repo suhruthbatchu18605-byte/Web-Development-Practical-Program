@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe Game - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Tic-Tac-Toe Game</h1>
+    <p class="program-desc">Complete 2-player Tic-Tac-Toe game with winning detection and board reset.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="max-width:240px; margin:0 auto; text-align:center;"><div id="tttBoard" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; margin-bottom:1rem;"></div><button class="btn btn-secondary" onclick="initTTT()">Reset Board</button><div class="output-box" id="output">Player X's Turn</div></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-112</p>
+  </footer>
+
+  <script>
+let ttt = Array(9).fill(''); let turn = 'X'; function initTTT() { ttt = Array(9).fill(''); turn = 'X'; const b = document.getElementById('tttBoard'); b.innerHTML = ''; for(let i=0; i<9; i++) { const cell = document.createElement('div'); cell.style.cssText = 'width:70px; height:70px; background:#1e1b4b; border-radius:6px; font-size:2rem; display:flex; align-items:center; justify-content:center; cursor:pointer; font-weight:bold; color:#38bdf8;'; cell.onclick = () => tttClick(i); b.appendChild(cell); } document.getElementById('output').textContent = "Player X's Turn"; } function tttClick(i) { if(ttt[i]) return; ttt[i] = turn; document.getElementById('tttBoard').children[i].textContent = turn; if(checkWin()) { document.getElementById('output').innerHTML = `<strong style="color:#10b981;">🎉 Player ${turn} Wins!</strong>`; return; } turn = turn === 'X' ? 'O' : 'X'; document.getElementById('output').textContent = `Player ${turn}'s Turn`; } function checkWin() { const wins = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]; return wins.some(([a,b,c]) => ttt[a] && ttt[a] === ttt[b] && ttt[a] === ttt[c]); } initTTT();
+  </script>
+</body>
+</html>

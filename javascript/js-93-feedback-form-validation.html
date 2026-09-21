@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form with Validation - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Feedback Form with Validation</h1>
+    <p class="program-desc">Customer review form validating rating stars, feedback category, and comments.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="max-width:400px; margin:0 auto;"><select id="fbCat" class="input-field" style="margin-bottom:0.75rem;"><option value="">Select Category</option><option value="bug">Bug Report</option><option value="feat">Feature Request</option></select><textarea id="fbMsg" class="input-field" rows="3" placeholder="Feedback message..."></textarea><button class="btn btn-primary" style="margin-top:0.75rem;" onclick="submitFeedback()">Send Feedback</button><div class="output-box" id="output">Status...</div></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-93</p>
+  </footer>
+
+  <script>
+function submitFeedback() { const c = document.getElementById('fbCat').value; const m = document.getElementById('fbMsg').value.trim(); document.getElementById('output').textContent = (c && m.length > 5) ? "✔ Feedback submitted. Thank you!" : "❌ Please choose a category and enter detailed comments."; }
+  </script>
+</body>
+</html>

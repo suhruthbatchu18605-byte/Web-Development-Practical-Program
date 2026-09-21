@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration with Real-Time Validation - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Student Registration with Real-Time Validation</h1>
+    <p class="program-desc">Real-time validation highlighting fields with green checkmarks or red error hints.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <form style="max-width:400px; margin:0 auto;"><div class="input-group"><label>Student Name</label><input type="text" id="srName" class="input-field" oninput="this.style.borderColor = this.value.length > 2 ? '#10b981' : '#ef4444'"></div><div class="input-group"><label>Email</label><input type="email" id="srEmail" class="input-field" oninput="this.style.borderColor = this.value.includes('@') ? '#10b981' : '#ef4444'"></div></form>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-89</p>
+  </footer>
+
+  <script>
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dependent Dropdown (Country -> State -> City) - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Dependent Dropdown (Country -> State -> City)</h1>
+    <p class="program-desc">Cascading dropdown menus where choosing country updates available states, which updates cities.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap;"><select id="ddCountry" class="input-field" style="flex:1;" onchange="updateStates()"><option value="">Select Country</option><option value="India">India</option><option value="USA">USA</option></select><select id="ddState" class="input-field" style="flex:1;" onchange="updateCities()"><option value="">Select State</option></select></div><div class="output-box" id="output">Select options above...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-79</p>
+  </footer>
+
+  <script>
+const data = { India: { 'Karnataka': ['Bengaluru', 'Mysuru'], 'Telangana': ['Hyderabad', 'Warangal'] }, USA: { 'California': ['San Francisco', 'Los Angeles'], 'New York': ['NYC', 'Buffalo'] } }; function updateStates() { const c = document.getElementById('ddCountry').value; const s = document.getElementById('ddState'); s.innerHTML = '<option value="">Select State</option>'; if (data[c]) Object.keys(data[c]).forEach(st => s.innerHTML += `<option value="${st}">${st}</option>`); } function updateCities() { const c = document.getElementById('ddCountry').value; const s = document.getElementById('ddState').value; document.getElementById('output').textContent = `Selection: ${c} > ${s}`; }
+  </script>
+</body>
+</html>

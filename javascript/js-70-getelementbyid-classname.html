@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>getElementById() and getElementsByClassName() - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>getElementById() and getElementsByClassName()</h1>
+    <p class="program-desc">Demonstrates selecting elements by unique ID versus HTMLCollection by class name.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div id="singleId" style="margin-bottom:0.5rem;">Target by ID</div><div class="groupedClass">Item 1 (class: groupedClass)</div><div class="groupedClass">Item 2 (class: groupedClass)</div><button class="btn btn-primary" style="margin-top:1rem;" onclick="testSelectors()">Select and Highlight</button>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-70</p>
+  </footer>
+
+  <script>
+function testSelectors() { document.getElementById('singleId').style.color = '#38bdf8'; const list = document.getElementsByClassName('groupedClass'); for(let el of list) el.style.color = '#10b981'; }
+  </script>
+</body>
+</html>

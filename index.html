@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML, CSS & JavaScript Practical Programs</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/common.js" defer></script>
+</head>
+<body>
+
+  <!-- Main Header Banner -->
+  <header class="main-header">
+    <span class="badge-tag">Academic Assignment &bull; Lab Practical Portfolio</span>
+    <h1 class="main-title">HTML, CSS & JAVASCRIPT</h1>
+    <p class="main-title" style="font-size: 1.75rem; font-weight: 600; margin-top: -0.5rem; color: #a5b4fc;">PRACTICAL PROGRAMS</p>
+    <p class="main-subtitle">
+      A comprehensive collection of 210+ practical lab programs covering HTML5 fundamentals, advanced CSS3 styling and layouts, modern JavaScript programming, DOM manipulation, event handling, web storage, mini projects, and Node.js backend experiments.
+    </p>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="stat-item">📄 <span class="stat-num">15</span> HTML Programs</div>
+      <div class="stat-item">🎨 <span class="stat-num">75</span> CSS Programs</div>
+      <div class="stat-item">⚡ <span class="stat-num">120</span> JavaScript Programs</div>
+      <div class="stat-item">🚀 <span class="stat-num">64</span> Node.js Programs</div>
+      <div class="stat-item">✨ <span class="stat-num">274</span> Total Programs</div>
+    </div>
+  </header>
+
+  <!-- Dashboard Container -->
+  <main class="dashboard-container">
+
+    <!-- Search Across All Programs -->
+    <div class="search-wrapper">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-all" class="search-input" placeholder="Quick search any practical topic (e.g., calculator, flexbox, table, regex, fetch, grid, jwt, routing)..." oninput="handleGlobalSearch(this.value)">
+      <div id="search-results-dropdown" style="display: none; background: rgba(22, 30, 49, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 12px; margin-top: 0.5rem; max-height: 320px; overflow-y: auto; padding: 0.5rem; box-shadow: 0 15px 35px rgba(0,0,0,0.6);"></div>
+    </div>
+
+    <!-- 3 Required Main Cards (+ Node.js Backend Card) -->
+    <h2 class="section-title">📂 Program Categories</h2>
+    <div class="cards-grid">
+
+      <!-- Card 1: HTML Programs -->
+      <div class="card card-html">
+        <div class="card-header-icon">🌐</div>
+        <span class="card-badge">15 Programs</span>
+        <h3 class="card-title">HTML Programs</h3>
+        <p class="card-desc">
+          Foundational web structures: headings, paragraphs, lists, complex tables, media elements, iframes, HTML5 semantic elements, registration forms, and modern input types.
+        </p>
+        <ul class="card-features">
+          <li>✔ Headings, Paragraphs & Lists</li>
+          <li>✔ Tables with Colspan & Rowspan</li>
+          <li>✔ Student Registration Forms</li>
+          <li>✔ HTML5 Audio, Video & Iframes</li>
+          <li>✔ Semantic Elements & Responsive Layouts</li>
+        </ul>
+        <a href="html/index.html" class="card-btn">
+          View HTML Programs &rarr;
+        </a>
+      </div>
+
+      <!-- Card 2: CSS Programs -->
+      <div class="card card-css">
+        <div class="card-header-icon">🎨</div>
+        <span class="card-badge">75 Programs</span>
+        <h3 class="card-title">CSS Programs</h3>
+        <p class="card-desc">
+          Complete CSS styling: box model, positioning, Flexbox, CSS Grid, animations, keyframes, transitions, dark mode variables, responsive landing pages, and modern CSS functions.
+        </p>
+        <ul class="card-features">
+          <li>✔ Box Model, Positioning & Floats</li>
+          <li>✔ Flexbox & CSS Grid Masteries</li>
+          <li>✔ 2D/3D Transforms & Keyframe Animations</li>
+          <li>✔ Dropdowns, Modals, Tooltips & Navbars</li>
+          <li>✔ Mobile-First & Dark-Mode Design</li>
+        </ul>
+        <a href="css/index.html" class="card-btn">
+          View CSS Programs &rarr;
+        </a>
+      </div>
+
+      <!-- Card 3: JavaScript Programs -->
+      <div class="card card-js">
+        <div class="card-header-icon">⚡</div>
+        <span class="card-badge">120 Programs</span>
+        <h3 class="card-title">JavaScript Programs</h3>
+        <p class="card-desc">
+          Dynamic client-side programming: core algorithms, DOM manipulation, event handling, real-time form validation, localStorage persistence, ES6+ features, and interactive mini projects.
+        </p>
+        <ul class="card-features">
+          <li>✔ Core Logic, Arrays, Strings & Objects</li>
+          <li>✔ Dynamic DOM Elements & Tables</li>
+          <li>✔ Mouse, Keyboard & Drag-and-Drop Events</li>
+          <li>✔ Real-time Validation & Password Meters</li>
+          <li>✔ 17 Interactive Mini Projects (Calculator, Clock, To-Do, Quiz, etc.)</li>
+        </ul>
+        <a href="javascript/index.html" class="card-btn">
+          View JavaScript Programs &rarr;
+        </a>
+      </div>
+
+      <!-- Card 4: Node.js Backend Experiments -->
+      <div class="card card-node">
+        <div class="card-header-icon">🟩</div>
+        <span class="card-badge">50+ Experiments</span>
+        <h3 class="card-title">Node.js Backend</h3>
+        <p class="card-desc">
+          Server-side architecture: HTTP servers, FS/Path modules, Express framework, routing, custom middleware, sessions, cookies, database connectivity, CRUD APIs, JWT auth, and role-based access.
+        </p>
+        <ul class="card-features">
+          <li>✔ Client-Server Architecture & HTTP Server</li>
+          <li>✔ Express Routing, Params & Static Files</li>
+          <li>✔ Custom, Logging & Auth Middleware</li>
+          <li>✔ Full CRUD APIs with Validation</li>
+          <li>✔ JWT Authentication & Role-Based Access</li>
+        </ul>
+        <a href="nodejs/index.html" class="card-btn">
+          View Node.js Experiments &rarr;
+        </a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-info">
+      <div class="footer-item"><strong>Assignment:</strong> HTML, CSS & JavaScript Practical Assignment</div>
+      <div class="footer-item"><strong>Total Programs:</strong> 210+ Executable Programs</div>
+      <div class="footer-item"><strong>Status:</strong> Complete & Tested</div>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; Executable directly in modern web browsers.</p>
+  </footer>
+
+  <script>
+    const allPrograms = [
+      // Quick searchable items
+      { name: "HTML - Basic Webpage", url: "html/html-01-basic-page.html", cat: "HTML" },
+      { name: "HTML - Lists (Ordered, Unordered, DL)", url: "html/html-02-lists.html", cat: "HTML" },
+      { name: "HTML - Tables with Merged Cells", url: "html/html-03-tables.html", cat: "HTML" },
+      { name: "HTML - Registration Form", url: "html/html-05-registration-form.html", cat: "HTML" },
+      { name: "HTML - College Timetable", url: "html/html-10-timetable.html", cat: "HTML" },
+      { name: "CSS - Box Model Demonstration", url: "css/css-05-box-model.html", cat: "CSS" },
+      { name: "CSS - Flexbox Layout", url: "css/css-14-flexbox.html", cat: "CSS" },
+      { name: "CSS - CSS Grid Layout", url: "css/css-15-grid-layout.html", cat: "CSS" },
+      { name: "CSS - Keyframe Animations", url: "css/css-18-animations.html", cat: "CSS" },
+      { name: "CSS - Dark Mode with CSS Variables", url: "css/css-71-dark-mode-css-variables.html", cat: "CSS" },
+      { name: "CSS - Complete Responsive Website", url: "css/css-75-complete-responsive-site.html", cat: "CSS" },
+      { name: "JS - Digital Calculator", url: "javascript/js-104-digital-calculator.html", cat: "JS" },
+      { name: "JS - Digital Clock", url: "javascript/js-105-digital-clock-project.html", cat: "JS" },
+      { name: "JS - Stopwatch", url: "javascript/js-106-stopwatch-project.html", cat: "JS" },
+      { name: "JS - Countdown Timer", url: "javascript/js-107-countdown-timer-project.html", cat: "JS" },
+      { name: "JS - To-Do List Application", url: "javascript/js-108-todo-list-project.html", cat: "JS" },
+      { name: "JS - Quiz Application", url: "javascript/js-110-quiz-app-project.html", cat: "JS" },
+      { name: "JS - Tic-Tac-Toe Game", url: "javascript/js-112-tic-tac-toe.html", cat: "JS" },
+      { name: "JS - Expense Tracker", url: "javascript/js-113-expense-tracker.html", cat: "JS" },
+      { name: "JS - Password Strength Checker", url: "javascript/js-91-password-strength-checker.html", cat: "JS" },
+      { name: "JS - Drag and Drop Application", url: "javascript/js-88-drag-and-drop.html", cat: "JS" },
+      { name: "JS - Shopping Cart with LocalStorage", url: "javascript/js-102-shopping-cart-localstorage.html", cat: "JS" }
+    ];
+
+    function handleGlobalSearch(query) {
+      const dropdown = document.getElementById('search-results-dropdown');
+      if (!query.trim()) {
+        dropdown.style.display = 'none';
+        return;
+      }
+      const filtered = allPrograms.filter(p => p.name.toLowerCase().includes(query.toLowerCase()) || p.cat.toLowerCase().includes(query.toLowerCase()));
+      if (filtered.length === 0) {
+        dropdown.innerHTML = '<div style="padding: 0.5rem 1rem; color: #94a3b8;">No matching programs found. Browse category pages above.</div>';
+      } else {
+        dropdown.innerHTML = filtered.map(p => `
+          <a href="${p.url}" style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; border-radius: 6px; color: #f8fafc; text-decoration: none; border-bottom: 1px solid #334155;">
+            <span>${p.name}</span>
+            <span style="font-size: 0.75rem; background: #334155; padding: 0.2rem 0.5rem; border-radius: 4px; color: #38bdf8;">${p.cat}</span>
+          </a>
+        `).join('');
+      }
+      dropdown.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

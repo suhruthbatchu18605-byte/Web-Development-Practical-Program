@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Timetable Using HTML Table - HTML Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to HTML Programs</a>
+    </div>
+    <h1>College Timetable Using HTML Table</h1>
+    <p class="program-desc">A college weekly academic timetable demonstrating complex table layout with merged period slots, lunch breaks, and practical sessions.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+
+      <div class="demo-card">
+        <h2 class="demo-title">Department of Computer Science & Engineering - Weekly Timetable</h2>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; text-align: center; border: 1px solid var(--border); font-size: 0.9rem;">
+            <thead>
+              <tr style="background: #1e1b4b; color: #a5b4fc;">
+                <th style="border: 1px solid var(--border); padding: 0.75rem;">Day / Time</th>
+                <th style="border: 1px solid var(--border); padding: 0.75rem;">09:00 - 10:00</th>
+                <th style="border: 1px solid var(--border); padding: 0.75rem;">10:00 - 11:00</th>
+                <th style="border: 1px solid var(--border); padding: 0.75rem;">11:00 - 11:15</th>
+                <th style="border: 1px solid var(--border); padding: 0.75rem;">11:15 - 12:15</th>
+                <th style="border: 1px solid var(--border); padding: 0.75rem;">12:15 - 01:00</th>
+                <th style="border: 1px solid var(--border); padding: 0.75rem;">01:00 - 03:00</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid var(--border); padding: 0.75rem; font-weight: bold; background: rgba(255,255,255,0.03);">Monday</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Web Technologies</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Data Structures</td>
+                <td rowspan="5" style="border: 1px solid var(--border); padding: 0.5rem; background: rgba(245, 158, 11, 0.1); color: #f59e0b; font-weight: bold; writing-mode: vertical-rl; transform: rotate(180deg);">TEA BREAK</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Operating Systems</td>
+                <td rowspan="5" style="border: 1px solid var(--border); padding: 0.5rem; background: rgba(239, 68, 68, 0.1); color: #f87171; font-weight: bold; writing-mode: vertical-rl; transform: rotate(180deg);">LUNCH BREAK</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem; background: rgba(16, 185, 129, 0.1); color: #34d399;">Web Programming Lab (Batch A)</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid var(--border); padding: 0.75rem; font-weight: bold; background: rgba(255,255,255,0.03);">Tuesday</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Computer Networks</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Database Systems</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Software Engg</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem; background: rgba(59, 130, 246, 0.1); color: #60a5fa;">DBMS Practical Lab</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid var(--border); padding: 0.75rem; font-weight: bold; background: rgba(255,255,255,0.03);">Wednesday</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Operating Systems</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Web Technologies</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Mathematics IV</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Library / Seminar</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid var(--border); padding: 0.75rem; font-weight: bold; background: rgba(255,255,255,0.03);">Thursday</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Database Systems</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Computer Networks</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Web Technologies</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem; background: rgba(16, 185, 129, 0.1); color: #34d399;">Network Lab (Batch B)</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid var(--border); padding: 0.75rem; font-weight: bold; background: rgba(255,255,255,0.03);">Friday</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Data Structures</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Mathematics IV</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Operating Systems</td>
+                <td style="border: 1px solid var(--border); padding: 0.75rem;">Sports & Mentoring</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to HTML Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; HTML Programs Section &bull; HTML-10</p>
+  </footer>
+
+</body>
+</html>

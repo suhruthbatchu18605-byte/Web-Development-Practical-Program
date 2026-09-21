@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Keyframe Animations (@keyframes) - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>CSS Keyframe Animations (@keyframes)</h1>
+    <p class="program-desc">Multi-step CSS keyframe animations demonstrating pulse, bounce, and infinite rotating rings.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>
+         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-25px); } }
+         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+         .bounce-ball { width: 60px; height: 60px; background: #f59e0b; border-radius: 50%; animation: bounce 1.2s infinite ease-in-out; margin: 0 auto 1.5rem; }
+         .spin-ring { width: 60px; height: 60px; border: 6px solid #334155; border-top: 6px solid #38bdf8; border-radius: 50%; animation: spin 1s infinite linear; margin: 0 auto; }
+       </style>
+       <div style="display: flex; justify-content: space-around; align-items: center; padding: 2rem 0;">
+         <div><div class="bounce-ball"></div><p style="text-align: center; font-size: 0.85rem; color: var(--text-muted);">Bouncing Ball</p></div>
+         <div><div class="spin-ring"></div><p style="text-align: center; font-size: 0.85rem; color: var(--text-muted);">Spinning Ring</p></div>
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-18</p>
+  </footer>
+
+</body>
+</html>

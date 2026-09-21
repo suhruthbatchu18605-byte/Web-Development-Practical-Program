@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Template Areas - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>CSS Grid Template Areas</h1>
+    <p class="program-desc">Structured document layout defined using `grid-template-areas` with named areas for header, nav, main, sidebar, and footer.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>
+         .area-grid { display: grid; grid-template-areas: 'hdr hdr' 'nav main' 'ftr ftr'; grid-template-columns: 160px 1fr; gap: 0.75rem; }
+         .area-hdr { grid-area: hdr; background: #1e1b4b; padding: 1rem; border-radius: 6px; text-align: center; }
+         .area-nav { grid-area: nav; background: #0b1120; padding: 1rem; border-radius: 6px; }
+         .area-main { grid-area: main; background: #1e293b; padding: 1rem; border-radius: 6px; }
+         .area-ftr { grid-area: ftr; background: #0f172a; padding: 0.75rem; border-radius: 6px; text-align: center; }
+       </style>
+       <div class="area-grid">
+         <div class="area-hdr">grid-area: hdr</div>
+         <div class="area-nav">grid-area: nav</div>
+         <div class="area-main">grid-area: main</div>
+         <div class="area-ftr">grid-area: ftr</div>
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-61</p>
+  </footer>
+
+</body>
+</html>

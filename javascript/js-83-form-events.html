@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Events (submit, change, focus, blur) - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Form Events (submit, change, focus, blur)</h1>
+    <p class="program-desc">Demonstrates input focus, blur, change, and submit event listeners.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <form onsubmit="event.preventDefault(); logEvt('submit');"><input type="text" class="input-field" placeholder="Focus/Blur/Change demo" onfocus="logEvt('focus')" onblur="logEvt('blur')" onchange="logEvt('change')"><button class="btn btn-primary" style="margin-top:0.5rem;">Submit</button></form><div class="output-box" id="output">Event log...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-83</p>
+  </footer>
+
+  <script>
+function logEvt(type) { document.getElementById('output').textContent = `Event Triggered: ${type} at ` + new Date().toLocaleTimeString(); }
+  </script>
+</body>
+</html>

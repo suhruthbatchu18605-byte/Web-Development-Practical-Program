@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greatest Common Divisor (GCD) of Two Numbers - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Greatest Common Divisor (GCD) of Two Numbers</h1>
+    <p class="program-desc">Computes the GCD (HCF) of two integers using the Euclidean algorithm.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="display:flex; gap:1rem;"><input type="number" id="gcdA" class="input-field" value="48"><input type="number" id="gcdB" class="input-field" value="18"></div><button class="btn btn-primary" style="margin-top:1rem;" onclick="calcGCD()">Compute GCD</button><div class="output-box" id="output">Result...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-47</p>
+  </footer>
+
+  <script>
+function calcGCD() { let a = Math.abs(parseInt(document.getElementById('gcdA').value)); let b = Math.abs(parseInt(document.getElementById('gcdB').value)); const x = a, y = b; while (b) { [a, b] = [b, a % b]; } document.getElementById('output').textContent = `GCD(${x}, ${y}) = ${a}`; }
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List Using JavaScript - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>To-Do List Using JavaScript</h1>
+    <p class="program-desc">Add tasks, toggle completed state, and delete tasks dynamically.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div style="max-width: 500px; margin: 0 auto;">
+       <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+         <input type="text" id="todoInput" class="input-field" placeholder="Enter a new task...">
+         <button class="btn btn-primary" onclick="addTodo()">Add Task</button>
+       </div>
+       <ul id="todoList" style="list-style: none;"></ul>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-31</p>
+  </footer>
+
+  <script>
+
+     function addTodo() {
+       const inp = document.getElementById('todoInput');
+       const text = inp.value.trim();
+       if (!text) return;
+       const li = document.createElement('li');
+       li.style.cssText = "display: flex; justify-content: space-between; align-items: center; background: #0b1120; border: 1px solid var(--border); padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 0.5rem;";
+       li.innerHTML = `
+         <span onclick="this.style.textDecoration = this.style.textDecoration === 'line-through' ? 'none' : 'line-through'; this.style.color = '#94a3b8';" style="cursor: pointer; flex: 1;">${text}</span>
+         <button class="btn btn-danger" style="padding: 0.2rem 0.6rem; font-size: 0.8rem;" onclick="this.parentElement.remove()">Delete</button>
+       `;
+       document.getElementById('todoList').appendChild(li);
+       inp.value = '';
+     }
+     
+  </script>
+</body>
+</html>

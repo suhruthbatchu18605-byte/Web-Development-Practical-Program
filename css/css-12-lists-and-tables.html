@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Lists and Tables Styling - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>CSS Lists and Tables Styling</h1>
+    <p class="program-desc">Custom bullet list styling, zebra-striped data table with row hover effects, and styled table captions.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>
+         .custom-list { list-style: none; padding-left: 0; }
+         .custom-list li { position: relative; padding-left: 2rem; margin-bottom: 0.5rem; }
+         .custom-list li::before { content: '🚀'; position: absolute; left: 0; }
+         .styled-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+         .styled-table th, .styled-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); text-align: left; }
+         .styled-table tr:nth-child(even) { background: rgba(255, 255, 255, 0.03); }
+         .styled-table tr:hover { background: rgba(79, 70, 229, 0.15); }
+       </style>
+       <ul class="custom-list">
+         <li>Scalable Vector Architecture</li>
+         <li>Dynamic Cascade Overrides</li>
+       </ul>
+       <table class="styled-table">
+         <thead><tr style="color: #38bdf8;"><th>Framework</th><th>Syntax</th><th>Popularity</th></tr></thead>
+         <tbody>
+           <tr><td>Tailwind</td><td>Utility-first</td><td>High</td></tr>
+           <tr><td>Bootstrap</td><td>Component-based</td><td>High</td></tr>
+           <tr><td>Sass/SCSS</td><td>Preprocessor</td><td>Very High</td></tr>
+         </tbody>
+       </table>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-12</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Validation Error Messages Without Reload - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Dynamic Validation Error Messages Without Reload</h1>
+    <p class="program-desc">Displays inline contextual errors without refreshing the browser page.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <form onsubmit="event.preventDefault(); inlineVal();" style="max-width:360px; margin:0 auto;"><input type="text" id="ivInp" class="input-field" placeholder="Enter username"><span id="ivErr" style="color:#ef4444; font-size:0.85rem; display:block; margin-top:0.25rem;"></span><button class="btn btn-primary" style="margin-top:0.75rem;">Submit</button></form>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-95</p>
+  </footer>
+
+  <script>
+function inlineVal() { const v = document.getElementById('ivInp').value.trim(); document.getElementById('ivErr').textContent = v ? '' : 'Username cannot be blank!'; }
+  </script>
+</body>
+</html>

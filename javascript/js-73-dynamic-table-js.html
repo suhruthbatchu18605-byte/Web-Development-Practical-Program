@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a Dynamic Table Using JavaScript - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Create a Dynamic Table Using JavaScript</h1>
+    <p class="program-desc">Renders an HTML table dynamically from an array of student objects.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <button class="btn btn-primary" onclick="buildTable()">Render Table</button><div id="dynTableWrap" style="margin-top:1rem;"></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-73</p>
+  </footer>
+
+  <script>
+function buildTable() { const data = [{ id: 1, name: "Suhruth", marks: 95 }, { id: 2, name: "Alex", marks: 88 }]; let html = '<table style="width:100%; border-collapse:collapse; border:1px solid var(--border); text-align:left;">'; html += '<tr style="background:#1e1b4b;"><th>ID</th><th>Name</th><th>Marks</th></tr>'; data.forEach(d => { html += `<tr><td style="padding:0.5rem; border:1px solid var(--border);">${d.id}</td><td style="padding:0.5rem; border:1px solid var(--border);">${d.name}</td><td style="padding:0.5rem; border:1px solid var(--border);">${d.marks}</td></tr>`; }); html += '</table>'; document.getElementById('dynTableWrap').innerHTML = html; }
+  </script>
+</body>
+</html>

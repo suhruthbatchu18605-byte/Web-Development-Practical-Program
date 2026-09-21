@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Menu Using HTML and CSS - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>Dropdown Menu Using HTML and CSS</h1>
+    <p class="program-desc">Pure CSS multi-level dropdown menu using nested lists and :hover selectors without any JavaScript.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>
+         .dd-menu { list-style: none; display: flex; gap: 1rem; background: #0b1120; padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid var(--border); }
+         .dd-item { position: relative; }
+         .dd-item a { color: #f8fafc; text-decoration: none; padding: 0.5rem 1rem; display: block; }
+         .dd-submenu { display: none; position: absolute; top: 100%; left: 0; background: #1e293b; min-width: 160px; list-style: none; border-radius: 6px; border: 1px solid var(--border); padding: 0.5rem 0; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+         .dd-item:hover .dd-submenu { display: block; }
+         .dd-submenu a:hover { background: #334155; }
+       </style>
+       <ul class="dd-menu">
+         <li class="dd-item"><a href="#">Home</a></li>
+         <li class="dd-item">
+           <a href="#">Courses &dtrif;</a>
+           <ul class="dd-submenu">
+             <li><a href="#">Web Engineering</a></li>
+             <li><a href="#">Data Science</a></li>
+             <li><a href="#">Cloud Systems</a></li>
+           </ul>
+         </li>
+         <li class="dd-item"><a href="#">Contact</a></li>
+       </ul>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-39</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Common Elements in Two Arrays - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Common Elements in Two Arrays</h1>
+    <p class="program-desc">Finds the intersection of elements present in both arrays.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="display:flex; gap:1rem;"><input type="text" id="cArr1" class="input-field" value="1, 2, 3, 4"><input type="text" id="cArr2" class="input-field" value="3, 4, 5, 6"></div><button class="btn btn-primary" style="margin-top:1rem;" onclick="findCommon()">Find Common Elements</button><div class="output-box" id="output">Result...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-58</p>
+  </footer>
+
+  <script>
+function findCommon() { const a = document.getElementById('cArr1').value.split(',').map(s => s.trim()); const b = document.getElementById('cArr2').value.split(',').map(s => s.trim()); const common = a.filter(x => b.includes(x)); document.getElementById('output').textContent = `Common: [${common.join(', ')}]`; }
+  </script>
+</body>
+</html>

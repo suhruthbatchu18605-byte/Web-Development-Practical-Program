@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Image on Button Click - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Change Image on Button Click</h1>
+    <p class="program-desc">Swaps image source and caption dynamically on user button interaction.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div style="text-align: center;">
+       <div id="imgPlaceholder" style="width: 200px; height: 140px; margin: 0 auto 1rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 3rem; background: #3b82f6; transition: background 0.3s;">
+         💻
+       </div>
+       <h4 id="imgCaption" style="margin-bottom: 1rem;">State: Coding Mode</h4>
+       <button class="btn btn-primary" onclick="swapImage()">Toggle Mode</button>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-25</p>
+  </footer>
+
+  <script>
+
+     let isCoding = true;
+     function swapImage() {
+       isCoding = !isCoding;
+       const p = document.getElementById('imgPlaceholder');
+       const c = document.getElementById('imgCaption');
+       if (isCoding) {
+         p.textContent = '💻';
+         p.style.background = '#3b82f6';
+         c.textContent = 'State: Coding Mode';
+       } else {
+         p.textContent = '☕';
+         p.style.background = '#f59e0b';
+         c.textContent = 'State: Coffee Break Mode';
+       }
+     }
+     
+  </script>
+</body>
+</html>

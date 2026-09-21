@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Pseudo-Classes (:hover, :active, :focus, :visited) - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>CSS Pseudo-Classes (:hover, :active, :focus, :visited)</h1>
+    <p class="program-desc">Demonstrates interactive pseudo-classes applied to buttons, links, inputs, and list elements.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>
+         .btn-pseudo { background: #334155; color: #fff; border: 1px solid #475569; padding: 0.75rem 1.5rem; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
+         .btn-pseudo:hover { background: #4f46e5; transform: translateY(-2px); }
+         .btn-pseudo:active { background: #312e81; transform: scale(0.98); }
+         .input-pseudo:focus { outline: none; border-color: #10b981; box-shadow: 0 0 10px rgba(16, 185, 129, 0.4); }
+       </style>
+       <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+         <button class="btn-pseudo">Hover / Click Me (:hover & :active)</button>
+         <input type="text" class="input-field input-pseudo" style="max-width: 280px;" placeholder="Click inside to see :focus">
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-10</p>
+  </footer>
+
+</body>
+</html>

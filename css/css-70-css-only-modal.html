@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS-Only Modal / Popup Design - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>CSS-Only Modal / Popup Design</h1>
+    <p class="program-desc">Accessible CSS-only modal dialog implemented using the `:target` pseudo-class without any JavaScript.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>
+         .modal-target { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); align-items: center; justify-content: center; z-index: 1000; }
+         .modal-target:target { display: flex; }
+         .modal-content-box { background: #1e293b; border: 1px solid var(--border); padding: 2rem; border-radius: 12px; max-width: 450px; width: 90%; }
+       </style>
+       <div style="text-align: center;">
+         <a href="#demo-modal" class="btn btn-primary">Open CSS-Only Modal &nearr;</a>
+       </div>
+       <div id="demo-modal" class="modal-target">
+         <div class="modal-content-box">
+           <h3>CSS-Only Modal Dialog</h3>
+           <p style="color: var(--text-muted); margin: 1rem 0;">This popup is triggered purely using the URL hash and the CSS <code>:target</code> selector!</p>
+           <a href="#" class="btn btn-secondary">Close Modal &times;</a>
+         </div>
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-70</p>
+  </footer>
+
+</body>
+</html>

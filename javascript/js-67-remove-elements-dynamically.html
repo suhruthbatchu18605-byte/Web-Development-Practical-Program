@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remove Elements Dynamically - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Remove Elements Dynamically</h1>
+    <p class="program-desc">Deletes elements dynamically using element.remove().</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <button class="btn btn-primary" onclick="addRemovable()">Add Item</button><div id="removableContainer" style="margin-top:1rem; display:flex; gap:0.5rem; flex-wrap:wrap;"></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-67</p>
+  </footer>
+
+  <script>
+let remId = 1; function addRemovable() { const d = document.createElement('div'); d.style.cssText = 'background:#ef4444; color:white; padding:0.5rem 1rem; border-radius:6px; cursor:pointer;'; d.textContent = `Click to Delete #${remId++}`; d.onclick = function() { this.remove(); }; document.getElementById('removableContainer').appendChild(d); } addRemovable(); addRemovable();
+  </script>
+</body>
+</html>

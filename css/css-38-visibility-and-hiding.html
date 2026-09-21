@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visibility and Hiding Elements (display: none vs visibility: hidden) - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>Visibility and Hiding Elements (display: none vs visibility: hidden)</h1>
+    <p class="program-desc">Compares display: none (removes element from document flow) with visibility: hidden (preserves element layout space).</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <div style="display: flex; gap: 1rem; align-items: center; justify-content: center; flex-wrap: wrap;">
+         <div id="vis-box1" style="padding: 1.5rem; background: #4f46e5; color: white; border-radius: 8px;">Target Element</div>
+         <button class="btn btn-secondary" onclick="let b = document.getElementById('vis-box1'); b.style.display = b.style.display === 'none' ? 'block' : 'none';">Toggle display: none</button>
+         <button class="btn btn-secondary" onclick="let b = document.getElementById('vis-box1'); b.style.visibility = b.style.visibility === 'hidden' ? 'visible' : 'hidden';">Toggle visibility: hidden</button>
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-38</p>
+  </footer>
+
+</body>
+</html>

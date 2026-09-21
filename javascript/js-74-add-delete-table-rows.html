@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add and Delete Rows from a Table - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Add and Delete Rows from a Table</h1>
+    <p class="program-desc">Dynamically insert new rows from input fields and delete selected rows.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="display:flex; gap:0.5rem; margin-bottom:1rem;"><input type="text" id="rowItem" class="input-field" placeholder="Item"><button class="btn btn-primary" onclick="addRow()">Add Row</button></div><table id="editTable" style="width:100%; border-collapse:collapse; border:1px solid var(--border);"><thead><tr style="background:#1e1b4b;"><th style="padding:0.5rem;">Item</th><th style="padding:0.5rem;">Action</th></tr></thead><tbody></tbody></table>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-74</p>
+  </footer>
+
+  <script>
+function addRow() { const v = document.getElementById('rowItem').value.trim(); if (!v) return; const tr = document.createElement('tr'); tr.innerHTML = `<td style="padding:0.5rem; border:1px solid var(--border);">${v}</td><td style="padding:0.5rem; border:1px solid var(--border);"><button class="btn btn-danger" style="padding:0.2rem 0.5rem; font-size:0.8rem;" onclick="this.closest('tr').remove()">Delete</button></td>`; document.querySelector('#editTable tbody').appendChild(tr); document.getElementById('rowItem').value = ''; } addRow();
+  </script>
+</body>
+</html>

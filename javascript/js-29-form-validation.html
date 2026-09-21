@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation Program - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Form Validation Program</h1>
+    <p class="program-desc">Validates required fields, email format, and password length before submission.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <form onsubmit="validateBasicForm(event)" style="max-width: 440px; margin: 0 auto;">
+       <div class="input-group"><label>Full Name *</label><input type="text" id="vName" class="input-field"></div>
+       <div class="input-group"><label>Email *</label><input type="text" id="vEmail" class="input-field"></div>
+       <div class="input-group"><label>Password (min 6 chars) *</label><input type="password" id="vPass" class="input-field"></div>
+       <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Form</button>
+     </form>
+     <div class="output-box" id="formOutput">Form status will appear here...</div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-29</p>
+  </footer>
+
+  <script>
+
+     function validateBasicForm(e) {
+       e.preventDefault();
+       const name = document.getElementById('vName').value.trim();
+       const email = document.getElementById('vEmail').value.trim();
+       const pass = document.getElementById('vPass').value;
+       const out = document.getElementById('formOutput');
+
+       if (!name) { out.textContent = "Error: Name is required."; return; }
+       if (!email.includes('@') || !email.includes('.')) { out.textContent = "Error: Invalid email format."; return; }
+       if (pass.length < 6) { out.textContent = "Error: Password must be at least 6 characters."; return; }
+       out.innerHTML = "<strong style='color: #10b981;'>✔ Success! All fields valid. Form submitted.</strong>";
+     }
+     
+  </script>
+</body>
+</html>

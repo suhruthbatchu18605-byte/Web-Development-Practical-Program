@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Admission Form with Validation - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>College Admission Form with Validation</h1>
+    <p class="program-desc">Comprehensive admission form checking eligibility criteria, 12th percentage, and course selection.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="max-width:400px; margin:0 auto;"><input type="number" id="admPct" class="input-field" placeholder="12th Percentage (%)" min="0" max="100" style="margin-bottom:0.75rem;"><button class="btn btn-primary" onclick="checkEligibility()">Check Eligibility</button><div class="output-box" id="output">Enter percentage...</div></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-94</p>
+  </footer>
+
+  <script>
+function checkEligibility() { const p = parseFloat(document.getElementById('admPct').value); document.getElementById('output').textContent = p >= 60 ? `✔ Eligible for Engineering Admissions (${p}%)` : `❌ Minimum 60% required for eligibility (${p}%).`; }
+  </script>
+</body>
+</html>

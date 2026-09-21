@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Layout Using CSS Grid - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>Dashboard Layout Using CSS Grid</h1>
+    <p class="program-desc">Admin dashboard layout with sidebar navigation, metric stat cards, and analytical content areas.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <div style="display: grid; grid-template-columns: 200px 1fr; gap: 1rem; min-height: 200px;">
+         <div style="background: #0b1120; padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+           <strong style="color: #38bdf8;">Sidebar</strong>
+           <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Navigation Links</p>
+         </div>
+         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+           <div style="background: #1e1b4b; padding: 1rem; border-radius: 8px; border: 1px solid #4338ca;">Stat 1: 4.8K Users</div>
+           <div style="background: #064e3b; padding: 1rem; border-radius: 8px; border: 1px solid #059669;">Stat 2: $98.4K Revenue</div>
+         </div>
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-47</p>
+  </footer>
+
+</body>
+</html>

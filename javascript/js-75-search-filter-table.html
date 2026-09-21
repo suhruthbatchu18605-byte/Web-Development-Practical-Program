@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search / Filter Table Records - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Search / Filter Table Records</h1>
+    <p class="program-desc">Filters table rows dynamically as the user types in a search input.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <input type="text" id="tableFilter" class="input-field" placeholder="Search table..." onkeyup="filterTable()" style="margin-bottom:1rem;"><table id="searchTable" style="width:100%; border-collapse:collapse; border:1px solid var(--border);"><thead><tr style="background:#1e1b4b;"><th style="padding:0.5rem;">Topic</th><th style="padding:0.5rem;">Category</th></tr></thead><tbody><tr><td style="padding:0.5rem; border:1px solid var(--border);">Flexbox Layout</td><td style="padding:0.5rem; border:1px solid var(--border);">CSS</td></tr><tr><td style="padding:0.5rem; border:1px solid var(--border);">Arrow Functions</td><td style="padding:0.5rem; border:1px solid var(--border);">JavaScript</td></tr><tr><td style="padding:0.5rem; border:1px solid var(--border);">Semantic Tags</td><td style="padding:0.5rem; border:1px solid var(--border);">HTML</td></tr></tbody></table>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-75</p>
+  </footer>
+
+  <script>
+function filterTable() { const q = document.getElementById('tableFilter').value.toLowerCase(); document.querySelectorAll('#searchTable tbody tr').forEach(tr => { tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none'; }); }
+  </script>
+</body>
+</html>

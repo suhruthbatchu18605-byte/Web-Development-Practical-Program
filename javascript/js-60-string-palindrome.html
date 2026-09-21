@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Whether String is Palindrome - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Check Whether String is Palindrome</h1>
+    <p class="program-desc">Checks if a string is identical when read backwards (ignoring case and whitespace).</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <input type="text" id="palinStrInput" class="input-field" value="racecar"><button class="btn btn-primary" style="margin-top:1rem;" onclick="checkPalinStr()">Check Palindrome</button><div class="output-box" id="output">Result...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-60</p>
+  </footer>
+
+  <script>
+function checkPalinStr() { const raw = document.getElementById('palinStrInput').value; const clean = raw.toLowerCase().replace(/[^a-z0-9]/g, ''); const isP = clean === clean.split('').reverse().join(''); document.getElementById('output').textContent = `'${raw}' ${isP ? 'IS' : 'is NOT'} a palindrome!`; }
+  </script>
+</body>
+</html>

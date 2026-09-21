@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Inheritance and Specificity - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>CSS Inheritance and Specificity</h1>
+    <p class="program-desc">Visual demonstration of inherited properties (color, font) versus non-inherited properties (margin, border) and specificity calculations.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>
+         .parent-inherit { color: #38bdf8; font-family: monospace; border: 2px solid #475569; padding: 1.5rem; border-radius: 8px; }
+         .child-override { color: #f43f5e; font-weight: bold; }
+       </style>
+       <div class="parent-inherit">
+         Parent container (color: #38bdf8, font-family: monospace)
+         <p>Child paragraph automatically inherits parent font and color.</p>
+         <p class="child-override">Child with class selector overrides parent color to #f43f5e due to higher specificity.</p>
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-26</p>
+  </footer>
+
+</body>
+</html>

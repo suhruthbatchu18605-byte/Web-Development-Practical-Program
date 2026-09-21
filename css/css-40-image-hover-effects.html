@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Hover Effects Using CSS - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>Image Hover Effects Using CSS</h1>
+    <p class="program-desc">Image card with zoom scaling, slide-up overlay title, and darkened gradient mask on hover.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>
+         .img-hover-container { position: relative; width: 280px; height: 180px; margin: 0 auto; border-radius: 10px; overflow: hidden; }
+         .img-hover-bg { width: 100%; height: 100%; background: linear-gradient(135deg, #ec4899, #8b5cf6); transition: transform 0.4s; }
+         .img-hover-container:hover .img-hover-bg { transform: scale(1.1); }
+         .img-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); padding: 0.75rem; transform: translateY(100%); transition: transform 0.3s; color: white; text-align: center; }
+         .img-hover-container:hover .img-overlay { transform: translateY(0); }
+       </style>
+       <div class="img-hover-container">
+         <div class="img-hover-bg"></div>
+         <div class="img-overlay">Hover to Reveal Overlay Caption</div>
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-40</p>
+  </footer>
+
+</body>
+</html>

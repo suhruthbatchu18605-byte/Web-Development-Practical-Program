@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout Using CSS Grid & Media Queries - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>Responsive Layout Using CSS Grid & Media Queries</h1>
+    <p class="program-desc">Layout transitioning from 1 column on mobile to 2 columns on tablet and 4 columns on desktop viewports.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>
+         .resp-grid-demo { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+         @media (max-width: 900px) { .resp-grid-demo { grid-template-columns: repeat(2, 1fr); } }
+         @media (max-width: 500px) { .resp-grid-demo { grid-template-columns: 1fr; } }
+       </style>
+       <div class="resp-grid-demo">
+         <div style="background: #1e1b4b; padding: 1.5rem; border-radius: 6px; text-align: center;">Box 1</div>
+         <div style="background: #1e1b4b; padding: 1.5rem; border-radius: 6px; text-align: center;">Box 2</div>
+         <div style="background: #1e1b4b; padding: 1.5rem; border-radius: 6px; text-align: center;">Box 3</div>
+         <div style="background: #1e1b4b; padding: 1.5rem; border-radius: 6px; text-align: center;">Box 4</div>
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-63</p>
+  </footer>
+
+</body>
+</html>

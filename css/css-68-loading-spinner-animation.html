@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Loading Spinner Animations - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>CSS Loading Spinner Animations</h1>
+    <p class="program-desc">Variety of lightweight pure-CSS loading spinners: dual-ring spinner, pulsing dots, and circular progress bar.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>
+         @keyframes spin-loader { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+         .loader-ring { width: 50px; height: 50px; border: 5px solid rgba(255,255,255,0.1); border-top-color: #38bdf8; border-radius: 50%; animation: spin-loader 0.8s linear infinite; margin: 0 auto; }
+       </style>
+       <div class="loader-ring"></div>
+       <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem;">Loading Spinner Animation</p>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-68</p>
+  </footer>
+
+</body>
+</html>

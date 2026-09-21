@@ -1,0 +1,330 @@
+/* ==========================================================================
+   Shared Program Layout & Demonstration Styling
+   Modern Glassmorphism & High-End Dark Aesthetic
+   ========================================================================== */
+
+:root {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-glow: rgba(99, 102, 241, 0.35);
+  --secondary: #06b6d4;
+  --accent: #f59e0b;
+  --bg: #090d16;
+  --bg-glass: rgba(22, 30, 49, 0.6);
+  --bg-glass-card: rgba(26, 35, 58, 0.5);
+  --bg-surface: rgba(11, 17, 32, 0.7);
+  --border-glass: rgba(255, 255, 255, 0.1);
+  --border-glass-hover: rgba(99, 102, 241, 0.5);
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --radius: 16px;
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  --font: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg);
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.18) 0%, transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(6, 182, 212, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 50% 85%, rgba(236, 72, 153, 0.12) 0%, transparent 45%);
+  background-attachment: fixed;
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(9, 13, 22, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  border: 2px solid rgba(9, 13, 22, 0.8);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* ==========================================================================
+   Program Header (Glassmorphic)
+   ========================================================================== */
+
+.program-header {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--border-glass);
+  padding: 2rem 2.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.program-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1.1rem;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-glass);
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.nav-btn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 0 15px var(--primary-glow);
+  transform: translateY(-2px);
+}
+
+.nav-sep {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.program-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.program-desc {
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 900px;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   Main Program Container & Demo Cards (Frosted Glass)
+   ========================================================================== */
+
+.program-container {
+  max-width: 1040px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+  flex: 1;
+  width: 100%;
+}
+
+.demo-card {
+  background: var(--bg-glass-card);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-glass);
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.demo-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.demo-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-glass);
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ==========================================================================
+   Form Controls & UI Elements (Glassmorphic)
+   ========================================================================== */
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #cbd5e1;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.85rem 1.15rem;
+  background: rgba(11, 17, 32, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-glass);
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.25s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: rgba(20, 28, 50, 0.85);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  background: linear-gradient(135deg, var(--primary) 0%, #4338ca 100%);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, var(--primary) 100%);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: rgba(51, 65, 85, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-color: var(--border-glass);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.btn-secondary:hover {
+  background: rgba(71, 85, 105, 0.8);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
+}
+.btn-success:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.35);
+}
+.btn-danger:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5);
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+
+/* ==========================================================================
+   Output Console Display Box (Dark Glass Terminal)
+   ========================================================================== */
+
+.output-box {
+  margin-top: 1.5rem;
+  background: rgba(11, 17, 32, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: 10px;
+  padding: 1.25rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.95rem;
+  color: #38bdf8;
+  white-space: pre-wrap;
+  word-break: break-word;
+  min-height: 55px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.output-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: block;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   Program Footer (Glassmorphic)
+   ========================================================================== */
+
+.program-footer {
+  background: rgba(9, 13, 22, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border-glass);
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-top: auto;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .program-header { padding: 1.5rem 1rem; }
+  .demo-card { padding: 1.5rem 1.25rem; }
+}

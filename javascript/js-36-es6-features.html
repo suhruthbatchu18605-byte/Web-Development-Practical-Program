@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6 Features (let, const, Template Literals, Destructuring) - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>ES6 Features (let, const, Template Literals, Destructuring)</h1>
+    <p class="program-desc">Demonstrating let/const block scope, string interpolation, and object/array destructuring.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <button class="btn btn-primary" onclick="demoES6()">Run ES6 Demo</button><div class="output-box" id="output">Click to execute...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-36</p>
+  </footer>
+
+  <script>
+function demoES6() { const user = { id: 101, name: "Suhruth", role: "Dev" }; const { name, role } = user; document.getElementById('output').textContent = `Destructured: ${name} is a ${role}.\nTemplate Literal: 2 + 2 = ${2 + 2}`; }
+  </script>
+</body>
+</html>

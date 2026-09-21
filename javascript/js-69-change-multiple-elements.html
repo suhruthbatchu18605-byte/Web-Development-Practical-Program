@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Multiple Elements Simultaneously - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Change Multiple Elements Simultaneously</h1>
+    <p class="program-desc">Selects multiple elements with querySelectorAll and updates styles in a loop.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div class="multi-target" style="padding:0.75rem; background:#1e293b; margin-bottom:0.5rem; border-radius:6px;">Target Box 1</div><div class="multi-target" style="padding:0.75rem; background:#1e293b; margin-bottom:0.5rem; border-radius:6px;">Target Box 2</div><button class="btn btn-primary" onclick="updateAllTargets()">Update All Elements</button>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-69</p>
+  </footer>
+
+  <script>
+function updateAllTargets() { document.querySelectorAll('.multi-target').forEach((el, idx) => { el.style.background = '#4f46e5'; el.style.color = '#fff'; el.textContent = `Updated Box #${idx + 1}`; }); }
+  </script>
+</body>
+</html>

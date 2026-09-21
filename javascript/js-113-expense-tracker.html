@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Expense Tracker - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Simple Expense Tracker</h1>
+    <p class="program-desc">Logs transactions, calculates total balance, income, and expenses dynamically.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="max-width:400px; margin:0 auto;"><div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;"><input type="text" id="expDesc" class="input-field" placeholder="Description"><input type="number" id="expAmt" class="input-field" placeholder="Amount (+/-)"></div><button class="btn btn-primary" onclick="addExp()">Add Entry</button><div class="output-box" id="output">Total Balance: $0.00</div></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-113</p>
+  </footer>
+
+  <script>
+let total = 0; function addExp() { const d = document.getElementById('expDesc').value; const a = parseFloat(document.getElementById('expAmt').value) || 0; total += a; document.getElementById('output').textContent = `Total Balance: $${total.toFixed(2)}`; }
+  </script>
+</body>
+</html>

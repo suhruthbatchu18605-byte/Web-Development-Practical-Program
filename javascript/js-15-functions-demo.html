@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Functions Demonstration - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>JavaScript Functions Demonstration</h1>
+    <p class="program-desc">Demonstrates function declaration, function expression, parameters, default arguments, and return values.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="btn-group">
+       <button class="btn" onclick="demoFunctions()">Run Functions Demo</button>
+     </div>
+     <div class="output-box" id="output">Click to execute functions...</div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-15</p>
+  </footer>
+
+  <script>
+
+     function greet(name = "Student") { return `Hello, ${name}!`; }
+     const square = function(x) { return x * x; };
+     function demoFunctions() {
+       let out = "1. Function Declaration: " + greet("Suhruth") + "\n";
+       out += "2. Default Argument: " + greet() + "\n";
+       out += "3. Function Expression: square(8) = " + square(8);
+       document.getElementById('output').textContent = out;
+     }
+     
+  </script>
+</body>
+</html>

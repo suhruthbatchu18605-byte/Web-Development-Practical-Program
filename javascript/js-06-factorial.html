@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factorial of a Number - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Factorial of a Number</h1>
+    <p class="program-desc">Calculates factorial of a number using both iterative loop and recursive logic.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="input-group"><label>Enter a Non-Negative Integer (0-20)</label><input type="number" id="factInput" class="input-field" value="6" min="0" max="20"></div>
+     <button class="btn btn-primary" onclick="calcFactorial()">Calculate Factorial</button>
+     <div class="output-box" id="output">Result will appear here...</div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-06</p>
+  </footer>
+
+  <script>
+
+     function calcFactorial() {
+       const n = parseInt(document.getElementById('factInput').value);
+       if (isNaN(n) || n < 0) { document.getElementById('output').textContent = 'Please enter a valid non-negative integer.'; return; }
+       let fact = 1;
+       let steps = [];
+       for (let i = n; i >= 1; i--) {
+         fact *= i;
+         steps.push(i);
+       }
+       const expr = steps.length ? steps.join(' × ') : '1';
+       document.getElementById('output').textContent = `${n}! = ${expr} = ${fact}`;
+     }
+     
+  </script>
+</body>
+</html>

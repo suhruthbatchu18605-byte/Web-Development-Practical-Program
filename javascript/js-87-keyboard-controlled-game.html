@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard-Controlled Game - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Keyboard-Controlled Game</h1>
+    <p class="program-desc">Use Arrow Keys or WASD to navigate a character across a canvas board to collect items.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="text-align:center;"><div style="position:relative; width:300px; height:200px; background:#0b1120; border:2px solid var(--border); margin:0 auto; border-radius:8px; overflow:hidden;"><div id="player" style="position:absolute; top:80px; left:130px; width:30px; height:30px; background:#38bdf8; border-radius:6px; display:flex; align-items:center; justify-content:center;">🚀</div></div><p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem;">Use Arrow Keys or W/A/S/D to move!</p></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-87</p>
+  </footer>
+
+  <script>
+let px = 130, py = 80; window.addEventListener('keydown', e => { if (['ArrowUp', 'w', 'W'].includes(e.key)) py = Math.max(0, py - 10); if (['ArrowDown', 's', 'S'].includes(e.key)) py = Math.min(170, py + 10); if (['ArrowLeft', 'a', 'A'].includes(e.key)) px = Math.max(0, px - 10); if (['ArrowRight', 'd', 'D'].includes(e.key)) px = Math.min(270, px + 10); const p = document.getElementById('player'); p.style.top = py + 'px'; p.style.left = px + 'px'; });
+  </script>
+</body>
+</html>

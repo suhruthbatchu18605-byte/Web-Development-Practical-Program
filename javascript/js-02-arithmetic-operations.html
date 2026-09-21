@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arithmetic Operations - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Arithmetic Operations</h1>
+    <p class="program-desc">Performs addition, subtraction, multiplication, division, modulus, and exponentiation.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+       <div class="input-group"><label>First Number (A)</label><input type="number" id="numA" class="input-field" value="15"></div>
+       <div class="input-group"><label>Second Number (B)</label><input type="number" id="numB" class="input-field" value="4"></div>
+     </div>
+     <div class="btn-group">
+       <button class="btn" onclick="calc('+')">A + B</button>
+       <button class="btn" onclick="calc('-')">A - B</button>
+       <button class="btn" onclick="calc('*')">A &times; B</button>
+       <button class="btn" onclick="calc('/')">A &divide; B</button>
+       <button class="btn" onclick="calc('%')">A % B</button>
+       <button class="btn" onclick="calc('**')">A ** B</button>
+     </div>
+     <div class="output-box" id="output">Select an arithmetic operation...</div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-02</p>
+  </footer>
+
+  <script>
+
+     function calc(op) {
+       const a = parseFloat(document.getElementById('numA').value) || 0;
+       const b = parseFloat(document.getElementById('numB').value) || 0;
+       let res = 0;
+       if (op === '+') res = a + b;
+       else if (op === '-') res = a - b;
+       else if (op === '*') res = a * b;
+       else if (op === '/') res = b !== 0 ? (a / b).toFixed(4) : "Cannot divide by zero";
+       else if (op === '%') res = a % b;
+       else if (op === '**') res = a ** b;
+       document.getElementById('output').textContent = `${a} ${op} ${b} = ${res}`;
+     }
+     
+  </script>
+</body>
+</html>

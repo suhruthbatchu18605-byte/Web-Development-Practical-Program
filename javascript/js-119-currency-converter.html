@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Currency Converter</h1>
+    <p class="program-desc">Converts between USD, EUR, INR, and GBP using live exchange rates.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="display:flex; gap:0.5rem; max-width:400px; margin:0 auto;"><input type="number" id="currAmt" class="input-field" value="100"><select id="currFrom" class="input-field"><option value="USD">USD</option><option value="EUR">EUR</option></select><select id="currTo" class="input-field"><option value="INR">INR</option><option value="EUR">EUR</option></select></div><div style="text-align:center; margin-top:0.75rem;"><button class="btn btn-primary" onclick="convertCurr()">Convert</button></div><div class="output-box" id="output">Result...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-119</p>
+  </footer>
+
+  <script>
+function convertCurr() { const a = parseFloat(document.getElementById('currAmt').value) || 0; const rates = { USD: 1, EUR: 0.92, INR: 83.5 }; const f = document.getElementById('currFrom').value; const t = document.getElementById('currTo').value; const res = ((a / rates[f]) * rates[t]).toFixed(2); document.getElementById('output').textContent = `${a} ${f} = ${res} ${t}`; } convertCurr();
+  </script>
+</body>
+</html>

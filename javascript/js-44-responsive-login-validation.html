@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Login Form with JavaScript Validation - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Responsive Login Form with JavaScript Validation</h1>
+    <p class="program-desc">Login form featuring inline dynamic feedback and password requirements.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <form onsubmit="event.preventDefault(); validateLogin();" style="max-width:360px; margin:0 auto;"><div class="input-group"><label>Email</label><input type="email" id="loginEmail" class="input-field" required></div><div class="input-group"><label>Password</label><input type="password" id="loginPass" class="input-field" required></div><button class="btn btn-primary" style="width:100%;">Log In</button></form><div class="output-box" id="output">Ready...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-44</p>
+  </footer>
+
+  <script>
+function validateLogin() { const p = document.getElementById('loginPass').value; document.getElementById('output').textContent = p.length >= 6 ? "✔ Login valid!" : "❌ Password too short (min 6 chars)."; }
+  </script>
+</body>
+</html>

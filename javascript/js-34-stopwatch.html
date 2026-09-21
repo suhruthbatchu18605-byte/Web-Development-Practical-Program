@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch Using JavaScript - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Stopwatch Using JavaScript</h1>
+    <p class="program-desc">Accurate stopwatch featuring start, stop/pause, reset, and millisecond display.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div style="text-align: center; padding: 1.5rem 0;">
+       <div id="swDisplay" style="font-size: 3.5rem; font-family: monospace; color: #10b981; margin-bottom: 1rem;">00:00:00.00</div>
+       <div class="btn-group" style="justify-content: center;">
+         <button class="btn btn-success" onclick="startSW()">Start</button>
+         <button class="btn btn-secondary" onclick="stopSW()">Stop</button>
+         <button class="btn btn-danger" onclick="resetSW()">Reset</button>
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-34</p>
+  </footer>
+
+  <script>
+
+     let swTimer = null;
+     let swStart = 0;
+     let swElapsed = 0;
+     function formatSW(ms) {
+       const d = new Date(ms);
+       const m = String(d.getUTCMinutes()).padStart(2, '0');
+       const s = String(d.getUTCSeconds()).padStart(2, '0');
+       const cs = String(Math.floor(d.getUTCMilliseconds() / 10)).padStart(2, '0');
+       return `${m}:${s}.${cs}`;
+     }
+     function startSW() {
+       if (swTimer) return;
+       swStart = Date.now() - swElapsed;
+       swTimer = setInterval(() => {
+         swElapsed = Date.now() - swStart;
+         document.getElementById('swDisplay').textContent = formatSW(swElapsed);
+       }, 50);
+     }
+     function stopSW() {
+       clearInterval(swTimer);
+       swTimer = null;
+     }
+     function resetSW() {
+       stopSW();
+       swElapsed = 0;
+       document.getElementById('swDisplay').textContent = "00:00:00.00";
+     }
+     
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Background Color Dynamically - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Change Background Color Dynamically</h1>
+    <p class="program-desc">Changes background color of container using a color picker and random color generator.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div id="colorContainer" style="padding: 2rem; border-radius: 8px; border: 1px solid var(--border); text-align: center; margin-bottom: 1rem; transition: background 0.3s;">
+       <h4 id="colorLabel">Current Color: Default</h4>
+     </div>
+     <div style="display: flex; gap: 1rem; align-items: center; justify-content: center;">
+       <input type="color" id="picker" value="#4f46e5" onchange="setColor(this.value)">
+       <button class="btn btn-primary" onclick="randomColor()">Generate Random Color</button>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-22</p>
+  </footer>
+
+  <script>
+
+     function setColor(c) {
+       document.getElementById('colorContainer').style.background = c;
+       document.getElementById('colorLabel').textContent = "Current Color: " + c;
+     }
+     function randomColor() {
+       const rc = '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+       setColor(rc);
+       document.getElementById('picker').value = rc;
+     }
+     
+  </script>
+</body>
+</html>

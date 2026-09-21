@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form Using HTML Form Elements - HTML Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to HTML Programs</a>
+    </div>
+    <h1>Student Registration Form Using HTML Form Elements</h1>
+    <p class="program-desc">A comprehensive student registration form incorporating labels, text, email, password, radio buttons, checkboxes, select dropdowns, textareas, and action buttons.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+
+      <div class="demo-card">
+        <h2 class="demo-title">University Student Registration Portal</h2>
+        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Form submitted successfully!');">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+            <div class="input-group">
+              <label for="first-name">First Name *</label>
+              <input type="text" id="first-name" class="input-field" required placeholder="e.g. Suhruth">
+            </div>
+            <div class="input-group">
+              <label for="last-name">Last Name *</label>
+              <input type="text" id="last-name" class="input-field" required placeholder="e.g. Kotha">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+            <div class="input-group">
+              <label for="email">Student Email *</label>
+              <input type="email" id="email" class="input-field" required placeholder="student@college.edu">
+            </div>
+            <div class="input-group">
+              <label for="reg-no">Register Number *</label>
+              <input type="text" id="reg-no" class="input-field" required placeholder="e.g. 21CS045">
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Gender *</label>
+            <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem;">
+              <label><input type="radio" name="gender" value="male" required> Male</label>
+              <label><input type="radio" name="gender" value="female"> Female</label>
+              <label><input type="radio" name="gender" value="other"> Other</label>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="department">Academic Department *</label>
+            <select id="department" class="input-field" required>
+              <option value="">-- Select Department --</option>
+              <option value="cse">Computer Science & Engineering</option>
+              <option value="ai">Artificial Intelligence & Data Science</option>
+              <option value="ece">Electronics & Communication</option>
+              <option value="it">Information Technology</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Elective Courses</label>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+              <label><input type="checkbox" name="electives" value="cloud"> Cloud Computing</label>
+              <label><input type="checkbox" name="electives" value="cyber"> Cybersecurity & Cryptography</label>
+              <label><input type="checkbox" name="electives" value="web"> Full Stack Web Development</label>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="address">Permanent Address</label>
+            <textarea id="address" class="input-field" rows="3" placeholder="Enter full address..."></textarea>
+          </div>
+
+          <div class="btn-group">
+            <button type="submit" class="btn btn-success">Submit Registration</button>
+            <button type="reset" class="btn btn-secondary">Reset Form</button>
+          </div>
+        </form>
+      </div>
+
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to HTML Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; HTML Programs Section &bull; HTML-05</p>
+  </footer>
+
+</body>
+</html>

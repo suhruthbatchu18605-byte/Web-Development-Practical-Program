@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Width, Height, and Sizing Properties - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>Width, Height, and Sizing Properties</h1>
+    <p class="program-desc">Demonstrates width, min-width, max-width, height, vh, vw, and box-sizing (border-box vs content-box).</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <div style="box-sizing: content-box; width: 80%; max-width: 400px; padding: 20px; border: 4px solid #ec4899; background: #0b1120; margin-bottom: 1rem; border-radius: 8px;">
+         <strong>box-sizing: content-box</strong><br>Width = 80% (max 400px) + 40px padding + 8px borders
+       </div>
+       <div style="box-sizing: border-box; width: 80%; max-width: 400px; padding: 20px; border: 4px solid #10b981; background: #0b1120; border-radius: 8px;">
+         <strong>box-sizing: border-box</strong><br>Total element width strictly fits within 400px max
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-06</p>
+  </footer>
+
+</body>
+</html>

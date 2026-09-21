@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Layout Demonstration - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>CSS Grid Layout Demonstration</h1>
+    <p class="program-desc">Demonstrates 12-column grid system, grid-template-columns (repeat, minmax, 1fr), and grid gap properties.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>
+         .grid-demo { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+         .grid-item { background: #1e1b4b; border: 1px solid #4338ca; padding: 1.5rem; border-radius: 8px; text-align: center; color: #c7d2fe; font-weight: bold; }
+       </style>
+       <div class="grid-demo">
+         <div class="grid-item">Grid Cell 1</div>
+         <div class="grid-item">Grid Cell 2</div>
+         <div class="grid-item">Grid Cell 3</div>
+         <div class="grid-item">Grid Cell 4</div>
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-15</p>
+  </footer>
+
+</body>
+</html>

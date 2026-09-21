@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Click Event Counter - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Button Click Event Counter</h1>
+    <p class="program-desc">Tracks button clicks with an event listener and updates a visual badge counter.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div style="text-align: center; padding: 1.5rem 0;">
+       <h2 id="clickDisplay" style="font-size: 3rem; color: #38bdf8; margin-bottom: 1rem;">0</h2>
+       <button class="btn btn-primary" id="clickBtn">Click Me!</button>
+       <button class="btn btn-secondary" onclick="resetClicks()">Reset</button>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-23</p>
+  </footer>
+
+  <script>
+
+     let count = 0;
+     document.getElementById('clickBtn').addEventListener('click', () => {
+       count++;
+       document.getElementById('clickDisplay').textContent = count;
+     });
+     function resetClicks() {
+       count = 0;
+       document.getElementById('clickDisplay').textContent = 0;
+     }
+     
+  </script>
+</body>
+</html>

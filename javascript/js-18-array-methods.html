@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays and Array Methods - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Arrays and Array Methods</h1>
+    <p class="program-desc">Demonstrates push, pop, shift, unshift, map, filter, and reduce operations on arrays.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <button class="btn btn-primary" onclick="demoArrayMethods()">Run Array Methods Demo</button>
+     <div class="output-box" id="output">Click to execute...</div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-18</p>
+  </footer>
+
+  <script>
+
+     function demoArrayMethods() {
+       let arr = [1, 2, 3, 4, 5];
+       let out = `Initial Array: [${arr}]\n`;
+       arr.push(6);
+       out += `After push(6): [${arr}]\n`;
+       arr.pop();
+       out += `After pop(): [${arr}]\n`;
+       const doubled = arr.map(x => x * 2);
+       out += `Mapped (x * 2): [${doubled}]\n`;
+       const evens = arr.filter(x => x % 2 === 0);
+       out += `Filtered (Evens): [${evens}]`;
+       document.getElementById('output').textContent = out;
+     }
+     
+  </script>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js Backend Practical Programs</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/common.js" defer></script>
+</head>
+<body>
+
+  <header class="listing-header">
+    <div class="listing-nav">
+      <a href="../index.html" class="nav-pill">🏠 Home Dashboard</a>
+      <span style="color: var(--text-muted);">&rsaquo;</span>
+      <span class="nav-pill" style="border-color: var(--primary); color: #34d399;">Node.js Backend</span>
+    </div>
+    <h1 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 0.5rem; color: #34d399;">Node.js Backend Practical Programs</h1>
+    <p style="color: var(--text-muted); max-width: 750px; margin: 0 auto;">
+      All 64 Node.js practical programs. Every program can be opened directly in your browser with complete backend source code, live server execution, and an interactive API testing console!
+    </p>
+  </header>
+
+  <main class="dashboard-container">
+    <div class="search-wrapper">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-programs" class="search-input" placeholder="Search Node.js programs (e.g. http, routing, middleware, session, crud, jwt, rest api)...">
+    </div>
+
+    <div class="program-list-grid">
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-01 &bull; Server-Side Architecture</span>
+        <h3 class="item-title">Client-Server Architecture in Node.js</h3>
+        <p class="item-desc">Demonstrates client-server architecture where a client sends an HTTP request and the Node.js server processes and responds.</p>
+        <a href="node-01-client-server-arch.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-02 &bull; Server-Side Architecture</span>
+        <h3 class="item-title">Basic HTTP Server (http.createServer)</h3>
+        <p class="item-desc">Creates a lightweight native HTTP web server without external frameworks using the Node.js 'http' module.</p>
+        <a href="node-02-http-server.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-03 &bull; Server-Side Architecture</span>
+        <h3 class="item-title">Request-Response Cycle</h3>
+        <p class="item-desc">Inspects the HTTP Request (headers, method, url) and crafts the appropriate HTTP Response with headers and status code.</p>
+        <a href="node-03-request-response.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-04 &bull; Node.js Fundamentals</span>
+        <h3 class="item-title">File System (fs) Module</h3>
+        <p class="item-desc">Demonstrates asynchronous file operations: writeFile, readFile, appendFile, and unlink using Node.js 'fs'.</p>
+        <a href="node-04-fs-module.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-05 &bull; Node.js Fundamentals</span>
+        <h3 class="item-title">Path Module (join, resolve, extname)</h3>
+        <p class="item-desc">Demonstrates cross-platform file path resolution using path.join, path.resolve, path.extname, and path.basename.</p>
+        <a href="node-05-path-module.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-06 &bull; Node.js Fundamentals</span>
+        <h3 class="item-title">Custom Node.js Modules (module.exports)</h3>
+        <p class="item-desc">Creates and exports reusable mathematical and string utility functions using module.exports and require().</p>
+        <a href="node-06-custom-modules.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-07 &bull; Node.js Fundamentals</span>
+        <h3 class="item-title">NPM Packages Installation and Usage</h3>
+        <p class="item-desc">Demonstrates package.json dependency declaration, npm install, and third-party package usage (e.g. lodash, chalk).</p>
+        <a href="node-07-npm-packages.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-08 &bull; Node.js Fundamentals</span>
+        <h3 class="item-title">Callbacks, Promises, and Async/Await</h3>
+        <p class="item-desc">Asynchronous flow control: comparing legacy callback pattern, Promise chaining, and modern async/await syntax.</p>
+        <a href="node-08-async-await-promises.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-09 &bull; Node.js Fundamentals</span>
+        <h3 class="item-title">Error Handling in Node.js</h3>
+        <p class="item-desc">Demonstrates try...catch blocks, asynchronous Promise rejection handling, and process error handlers.</p>
+        <a href="node-09-error-handling.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-10 &bull; Express Framework</span>
+        <h3 class="item-title">Basic Express.js Application</h3>
+        <p class="item-desc">Initializes an Express application, binds a port listener, and handles HTTP root requests.</p>
+        <a href="node-10-express-basic-app.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-11 &bull; Express Framework</span>
+        <h3 class="item-title">Handling GET and POST Requests</h3>
+        <p class="item-desc">Demonstrates reading query data in GET and parsing JSON body payloads in POST using express.json().</p>
+        <a href="node-11-get-post-requests.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-12 &bull; Express Framework</span>
+        <h3 class="item-title">Serving Static Files (express.static)</h3>
+        <p class="item-desc">Serves HTML, CSS, JavaScript, and images statically from a designated 'public' directory.</p>
+        <a href="node-12-serve-static-files.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-13 &bull; Express Framework</span>
+        <h3 class="item-title">Sending HTML and JSON Responses</h3>
+        <p class="item-desc">Compares sending rendered HTML markup via res.send() vs serialized JSON data via res.json().</p>
+        <a href="node-13-html-json-responses.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-14 &bull; Express Framework</span>
+        <h3 class="item-title">Modular Project Structure</h3>
+        <p class="item-desc">Organizes application into separation of concerns: routes/, controllers/, models/, and middleware/.</p>
+        <a href="node-14-modular-project-structure.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-15 &bull; Routing</span>
+        <h3 class="item-title">Basic Routing in Express</h3>
+        <p class="item-desc">Defines endpoints for standard HTTP methods (GET, POST, PUT, DELETE) on distinct path routes.</p>
+        <a href="node-15-basic-routing.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-16 &bull; Routing</span>
+        <h3 class="item-title">Route and Query Parameters</h3>
+        <p class="item-desc">Captures URL path parameters (e.g. /users/:id) and URL query strings (e.g. ?role=admin).</p>
+        <a href="node-16-route-query-params.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-17 &bull; Routing</span>
+        <h3 class="item-title">Express Router (express.Router)</h3>
+        <p class="item-desc">Creates modular, mountable route handlers using express.Router() to manage separate resource routes.</p>
+        <a href="node-17-express-router.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-18 &bull; Routing</span>
+        <h3 class="item-title">404 / Not Found Route Handling</h3>
+        <p class="item-desc">Implements a catch-all route at the bottom of the middleware stack returning a 404 HTTP status.</p>
+        <a href="node-18-404-not-found-handler.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-19 &bull; Routing</span>
+        <h3 class="item-title">Modular Routes for Users, Products, Students</h3>
+        <p class="item-desc">Demonstrates mounting multiple domain routers (/users, /products, /students) into the main application.</p>
+        <a href="node-19-modular-routes.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-20 &bull; Middleware</span>
+        <h3 class="item-title">Custom Middleware Implementation</h3>
+        <p class="item-desc">Creates custom middleware functions with (req, res, next) signature to inspect and transform requests.</p>
+        <a href="node-20-custom-middleware.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-21 &bull; Middleware</span>
+        <h3 class="item-title">Request Logging Middleware</h3>
+        <p class="item-desc">Logs HTTP method, requested URL, client IP, and response time for every incoming request.</p>
+        <a href="node-21-logging-middleware.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-22 &bull; Middleware</span>
+        <h3 class="item-title">Request Validation Middleware</h3>
+        <p class="item-desc">Validates presence and format of required fields in req.body before delegating to the controller.</p>
+        <a href="node-22-validation-middleware.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-23 &bull; Middleware</span>
+        <h3 class="item-title">Authentication Middleware Guard</h3>
+        <p class="item-desc">Protects sensitive routes by validating Bearer authorization headers before permitting access.</p>
+        <a href="node-23-auth-middleware.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-24 &bull; Middleware</span>
+        <h3 class="item-title">Centralized Error-Handling Middleware</h3>
+        <p class="item-desc">Express error-handling middleware with 4 parameters (err, req, res, next) to catch unhandled errors.</p>
+        <a href="node-24-error-handling-middleware.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-25 &bull; Middleware</span>
+        <h3 class="item-title">Middleware Execution Pipeline Order</h3>
+        <p class="item-desc">Demonstrates synchronous and asynchronous middleware pipeline order: First -> Second -> Third -> Route.</p>
+        <a href="node-25-middleware-execution-order.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-26 &bull; Session & Cookies</span>
+        <h3 class="item-title">Creating and Managing Cookies</h3>
+        <p class="item-desc">Sets HTTP cookies using res.cookie() with HttpOnly, secure, and maxAge flags.</p>
+        <a href="node-26-cookies-management.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-27 &bull; Session & Cookies</span>
+        <h3 class="item-title">Reading and Deleting Cookies</h3>
+        <p class="item-desc">Reads incoming cookies via req.cookies and clears them using res.clearCookie().</p>
+        <a href="node-27-read-delete-cookies.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-28 &bull; Session & Cookies</span>
+        <h3 class="item-title">Session Management in Express</h3>
+        <p class="item-desc">Configures express-session middleware for server-side state tracking across requests.</p>
+        <a href="node-28-session-management.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-29 &bull; Session & Cookies</span>
+        <h3 class="item-title">Login and Logout Using Sessions</h3>
+        <p class="item-desc">Authenticates user credentials, sets req.session.user, and terminates session via req.session.destroy().</p>
+        <a href="node-29-login-logout-sessions.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-30 &bull; Session & Cookies</span>
+        <h3 class="item-title">Protected Routes with Session Auth</h3>
+        <p class="item-desc">Restricts access to sensitive views if req.session.user is not populated.</p>
+        <a href="node-30-protected-routes-session.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-31 &bull; Database Connectivity</span>
+        <h3 class="item-title">Database Connectivity (MongoDB/SQL)</h3>
+        <p class="item-desc">Establishes a connection pool to database (MongoDB via Mongoose or SQL via Sequelize/sqlite3).</p>
+        <a href="node-31-database-connection.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-32 &bull; Database Connectivity</span>
+        <h3 class="item-title">Create and Manage Database Tables</h3>
+        <p class="item-desc">Executes CREATE TABLE or Mongoose schema definitions for student and user entities.</p>
+        <a href="node-32-create-manage-tables.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-33 &bull; Database Connectivity</span>
+        <h3 class="item-title">Insert Records into Database</h3>
+        <p class="item-desc">Inserts new documents or rows into the database using insertOne / Model.create.</p>
+        <a href="node-33-insert-database-records.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-34 &bull; Database Connectivity</span>
+        <h3 class="item-title">Retrieve Records from Database</h3>
+        <p class="item-desc">Queries database records with filters, projection, and sorting using find() / SELECT.</p>
+        <a href="node-34-retrieve-database-records.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-35 &bull; Database Connectivity</span>
+        <h3 class="item-title">Update Database Records</h3>
+        <p class="item-desc">Updates existing records using findByIdAndUpdate or SQL UPDATE statement.</p>
+        <a href="node-35-update-database-records.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-36 &bull; Database Connectivity</span>
+        <h3 class="item-title">Delete Database Records</h3>
+        <p class="item-desc">Removes records from database using findByIdAndDelete or SQL DELETE statement.</p>
+        <a href="node-36-delete-database-records.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-37 &bull; CRUD Operations</span>
+        <h3 class="item-title">CRUD Operations with Express</h3>
+        <p class="item-desc">Complete Create, Read, Update, and Delete REST endpoints in an Express application.</p>
+        <a href="node-37-crud-operations-express.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-38 &bull; CRUD Operations</span>
+        <h3 class="item-title">Student Management CRUD Application</h3>
+        <p class="item-desc">Full Student CRUD: create student, retrieve student roster, update marks/GPA, and delete student.</p>
+        <a href="node-38-student-management-crud.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-39 &bull; CRUD Operations</span>
+        <h3 class="item-title">User Management CRUD Application</h3>
+        <p class="item-desc">User profile CRUD operations with validation and role management.</p>
+        <a href="node-39-user-management-crud.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-40 &bull; CRUD Operations</span>
+        <h3 class="item-title">Product Management CRUD Application</h3>
+        <p class="item-desc">E-commerce product catalog CRUD with inventory quantity and price updates.</p>
+        <a href="node-40-product-management-crud.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-41 &bull; CRUD Operations</span>
+        <h3 class="item-title">CRUD Operations with Database Connectivity</h3>
+        <p class="item-desc">Connects Express CRUD endpoints directly to database queries with error handling.</p>
+        <a href="node-41-crud-with-database.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-42 &bull; CRUD Operations</span>
+        <h3 class="item-title">Input Validation for CRUD Operations</h3>
+        <p class="item-desc">Enforces schema types, string lengths, and mandatory fields before executing CRUD mutations.</p>
+        <a href="node-42-crud-input-validation.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-43 &bull; Authentication</span>
+        <h3 class="item-title">User Registration Implementation</h3>
+        <p class="item-desc">Registers new users, checks duplicate email addresses, and hashes passwords securely.</p>
+        <a href="node-43-user-registration.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-44 &bull; Authentication</span>
+        <h3 class="item-title">User Login and Logout</h3>
+        <p class="item-desc">Authenticates credentials, issues session/token, and invalidates session upon logout.</p>
+        <a href="node-44-user-login-logout.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-45 &bull; Authentication</span>
+        <h3 class="item-title">Password Hashing (bcrypt / crypto)</h3>
+        <p class="item-desc">Hashes plain-text passwords using salt rounds with bcrypt or SHA-256 with cryptographic salt.</p>
+        <a href="node-45-password-hashing.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-46 &bull; Authentication</span>
+        <h3 class="item-title">Password Verification and Comparison</h3>
+        <p class="item-desc">Compares entered password with stored cryptographic hash to verify credentials.</p>
+        <a href="node-46-password-verification.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-47 &bull; Authentication</span>
+        <h3 class="item-title">JWT-Based Authentication</h3>
+        <p class="item-desc">Generates and signs JSON Web Tokens (JWT) containing user ID and expiration timestamp.</p>
+        <a href="node-47-jwt-authentication.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-48 &bull; Authentication</span>
+        <h3 class="item-title">Protected API Routes with JWT</h3>
+        <p class="item-desc">JWT authentication guard verifying token signature on incoming HTTP Authorization headers.</p>
+        <a href="node-48-protected-api-jwt.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-49 &bull; Authorization</span>
+        <h3 class="item-title">Role-Based Access Control (RBAC)</h3>
+        <p class="item-desc">Controls access permissions based on assigned user roles (e.g. Student, Faculty, Admin).</p>
+        <a href="node-49-role-based-authorization.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-50 &bull; Authorization</span>
+        <h3 class="item-title">Admin and User Roles Implementation</h3>
+        <p class="item-desc">Distinguishes standard user operations from administrative management functions.</p>
+        <a href="node-50-admin-user-roles.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-51 &bull; Authorization</span>
+        <h3 class="item-title">Restricting Routes Based on User Roles</h3>
+        <p class="item-desc">Applies role-checking middleware to sensitive endpoints (e.g. /grades/edit requires faculty role).</p>
+        <a href="node-51-restrict-routes-by-role.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-52 &bull; Authorization</span>
+        <h3 class="item-title">Authorization Middleware Pattern</h3>
+        <p class="item-desc">Reusable middleware generator checking permissions matrix for API endpoints.</p>
+        <a href="node-52-authorization-middleware.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-53 &bull; RESTful API</span>
+        <h3 class="item-title">RESTful API Using Express.js</h3>
+        <p class="item-desc">Complete RESTful resource structure supporting standard CRUD endpoints on /api/resources.</p>
+        <a href="node-53-rest-api-express.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-54 &bull; RESTful API</span>
+        <h3 class="item-title">GET REST API Endpoints</h3>
+        <p class="item-desc">Implements GET /api/v1/students with pagination, sorting, and field filtering.</p>
+        <a href="node-54-get-rest-api.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-55 &bull; RESTful API</span>
+        <h3 class="item-title">POST REST API Endpoints</h3>
+        <p class="item-desc">Creates new resources via POST returning 201 Created and Location header.</p>
+        <a href="node-55-post-rest-api.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-56 &bull; RESTful API</span>
+        <h3 class="item-title">PUT and PATCH REST API Endpoints</h3>
+        <p class="item-desc">Compares full resource replacement (PUT) versus partial attribute update (PATCH).</p>
+        <a href="node-56-put-patch-rest-api.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-57 &bull; RESTful API</span>
+        <h3 class="item-title">DELETE REST API Endpoints</h3>
+        <p class="item-desc">Removes resources and returns 200 OK or 204 No Content.</p>
+        <a href="node-57-delete-rest-api.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-58 &bull; RESTful API</span>
+        <h3 class="item-title">HTTP Status Codes in REST APIs</h3>
+        <p class="item-desc">Demonstrates 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Server Error.</p>
+        <a href="node-58-http-status-codes.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-59 &bull; RESTful API</span>
+        <h3 class="item-title">API Error Handling & Standardized Responses</h3>
+        <p class="item-desc">Standardizes API errors with timestamp, error code, path, and descriptive message.</p>
+        <a href="node-59-api-error-handling.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-60 &bull; RESTful API</span>
+        <h3 class="item-title">API Request Validation</h3>
+        <p class="item-desc">Validates payload schema with Joi / express-validator returning detailed 422 Unprocessable Entity.</p>
+        <a href="node-60-api-request-validation.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-61 &bull; RESTful API</span>
+        <h3 class="item-title">Testing REST APIs with Postman / cURL</h3>
+        <p class="item-desc">Demonstrates cURL commands, Postman environment variables, and automated collection testing.</p>
+        <a href="node-61-test-api-postman.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-62 &bull; RESTful API</span>
+        <h3 class="item-title">Student REST API with Database Connectivity</h3>
+        <p class="item-desc">Complete production-ready Student REST API connected to database with indexing and pagination.</p>
+        <a href="node-62-student-rest-api.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-63 &bull; RESTful API</span>
+        <h3 class="item-title">Product REST API with CRUD Operations</h3>
+        <p class="item-desc">Complete Product catalog REST API with price filtering, search, and stock level checks.</p>
+        <a href="node-63-product-rest-api.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+      <div class="program-item-card">
+        <span class="item-num" style="color: #34d399;">NODE-64 &bull; RESTful API</span>
+        <h3 class="item-title">User REST API with Auth & Authorization</h3>
+        <p class="item-desc">Complete secure User REST API with JWT authentication guard and role-based permissions.</p>
+        <a href="node-64-user-rest-api.html" class="item-link-btn" style="color: #34d399;">Open & Run Program &rarr;</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; Practical Programs Portfolio &bull; <a href="../index.html" style="color: #38bdf8;">Return to Home Dashboard</a></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slideshow / Carousel - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Image Slideshow / Carousel</h1>
+    <p class="program-desc">Interactive slideshow with Next, Prev, auto-advance, and slide index indicators.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="text-align:center;"><div id="slideFrame" style="height:180px; background:#4f46e5; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:3rem; color:white; margin-bottom:1rem;">Slide 1</div><div class="btn-group" style="justify-content:center;"><button class="btn" onclick="prevSlide()">&larr; Prev</button><button class="btn" onclick="nextSlide()">Next &rarr;</button></div></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-80</p>
+  </footer>
+
+  <script>
+const slides = ['Slide 1: Design', 'Slide 2: Code', 'Slide 3: Deploy']; let cur = 0; function showSlide() { document.getElementById('slideFrame').textContent = slides[cur]; } function nextSlide() { cur = (cur + 1) % slides.length; showSlide(); } function prevSlide() { cur = (cur - 1 + slides.length) % slides.length; showSlide(); }
+  </script>
+</body>
+</html>

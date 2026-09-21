@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Delegation - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Event Delegation</h1>
+    <p class="program-desc">Attaches a single event listener to a parent container to manage events for dynamically generated children.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <button class="btn btn-primary" onclick="addDelegatedChild()">Add Child Button</button><div id="parentDelegated" style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:1rem;"></div><div class="output-box" id="output">Click any child button...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-86</p>
+  </footer>
+
+  <script>
+let delId = 1; function addDelegatedChild() { const b = document.createElement('button'); b.className = 'btn btn-secondary'; b.textContent = `Button #${delId++}`; document.getElementById('parentDelegated').appendChild(b); } document.getElementById('parentDelegated').addEventListener('click', e => { if (e.target.tagName === 'BUTTON') document.getElementById('output').textContent = `Delegated Click: ${e.target.textContent}`; }); addDelegatedChild(); addDelegatedChild();
+  </script>
+</body>
+</html>

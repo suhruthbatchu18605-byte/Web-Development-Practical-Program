@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch Mini Project - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Stopwatch Mini Project</h1>
+    <p class="program-desc">Precision stopwatch with milliseconds timer, lap counter, and reset functionality.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="text-align:center;"><div id="swPDisp" style="font-size:3rem; font-family:monospace; color:#10b981; margin-bottom:1rem;">00:00.00</div><div class="btn-group" style="justify-content:center;"><button class="btn btn-success" onclick="swPStart()">Start</button><button class="btn btn-secondary" onclick="swPStop()">Pause</button><button class="btn btn-danger" onclick="swPReset()">Reset</button></div></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-106</p>
+  </footer>
+
+  <script>
+let swPTimer = null, swPElapsed = 0, swPStartT = 0; function swPStart() { if(swPTimer) return; swPStartT = Date.now() - swPElapsed; swPTimer = setInterval(() => { swPElapsed = Date.now() - swPStartT; const d = new Date(swPElapsed); document.getElementById('swPDisp').textContent = `${String(d.getUTCMinutes()).padStart(2,'0')}:${String(d.getUTCSeconds()).padStart(2,'0')}.${String(Math.floor(d.getUTCMilliseconds()/10)).padStart(2,'0')}`; }, 50); } function swPStop() { clearInterval(swPTimer); swPTimer = null; } function swPReset() { swPStop(); swPElapsed = 0; document.getElementById('swPDisp').textContent = "00:00.00"; }
+  </script>
+</body>
+</html>

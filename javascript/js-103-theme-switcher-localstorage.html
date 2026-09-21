@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Switcher Using localStorage - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Theme Switcher Using localStorage</h1>
+    <p class="program-desc">Remembers user choice between dark and light themes using localStorage.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div class="btn-group"><button class="btn btn-secondary" onclick="setThemeLS('light')">Light Theme</button><button class="btn btn-primary" onclick="setThemeLS('dark')">Dark Theme</button></div><div class="output-box" id="output">Current Theme: dark</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-103</p>
+  </footer>
+
+  <script>
+function setThemeLS(t) { localStorage.setItem('user_theme', t); document.getElementById('output').textContent = 'Saved Theme in localStorage: ' + t; } document.getElementById('output').textContent = 'Saved Theme in localStorage: ' + (localStorage.getItem('user_theme') || 'dark');
+  </script>
+</body>
+</html>

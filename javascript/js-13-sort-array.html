@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sort an Array - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Sort an Array</h1>
+    <p class="program-desc">Sorts numbers in ascending and descending order using custom comparator functions.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="input-group"><label>Numbers to Sort</label><input type="text" id="sortArrInput" class="input-field" value="45, 12, 89, 3, 27, 71"></div>
+     <div class="btn-group">
+       <button class="btn" onclick="sortArray('asc')">Sort Ascending &uarr;</button>
+       <button class="btn btn-secondary" onclick="sortArray('desc')">Sort Descending &darr;</button>
+     </div>
+     <div class="output-box" id="output">Result will appear here...</div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-13</p>
+  </footer>
+
+  <script>
+
+     function sortArray(order) {
+       const nums = document.getElementById('sortArrInput').value.split(',').map(s => parseFloat(s.trim())).filter(n => !isNaN(n));
+       if (order === 'asc') nums.sort((a, b) => a - b);
+       else nums.sort((a, b) => b - a);
+       document.getElementById('output').textContent = `Sorted (${order.toUpperCase()}): [${nums.join(', ')}]`;
+     }
+     
+  </script>
+</body>
+</html>

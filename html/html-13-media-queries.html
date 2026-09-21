@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage Using CSS Media Queries - HTML Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to HTML Programs</a>
+    </div>
+    <h1>Responsive Webpage Using CSS Media Queries</h1>
+    <p class="program-desc">Demonstrates responsive design using CSS @media rules adapting layout, column counts, and typography across mobile (<600px), tablet, and desktop viewports.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+
+      <div class="demo-card">
+        <h2 class="demo-title">Responsive Breakpoint Demonstration</h2>
+        
+        <style>
+          .resp-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+          }
+          .resp-badge {
+            background: #10b981;
+            padding: 0.5rem;
+            border-radius: 6px;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+          }
+          @media (max-width: 800px) {
+            .resp-container {
+              grid-template-columns: repeat(2, 1fr);
+            }
+            .resp-badge {
+              background: #f59e0b;
+            }
+          }
+          @media (max-width: 500px) {
+            .resp-container {
+              grid-template-columns: 1fr;
+            }
+            .resp-badge {
+              background: #ef4444;
+              color: white;
+            }
+          }
+        </style>
+
+        <div class="resp-badge" id="current-viewport">
+          Resize browser window to observe responsive columns and color shifts!
+        </div>
+
+        <div class="resp-container" style="margin-top: 1.5rem;">
+          <div style="background: #0b1120; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border);">
+            <h4>Column 1</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Desktop: 3-column &bull; Tablet: 2-column &bull; Mobile: 1-column stack.</p>
+          </div>
+          <div style="background: #0b1120; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border);">
+            <h4>Column 2</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Adjusting fluid widths and CSS media queries dynamically.</p>
+          </div>
+          <div style="background: #0b1120; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border);">
+            <h4>Column 3</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Automatic wrapping and responsive layout reflow.</p>
+          </div>
+        </div>
+      </div>
+
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to HTML Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; HTML Programs Section &bull; HTML-13</p>
+  </footer>
+
+</body>
+</html>

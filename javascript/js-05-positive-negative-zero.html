@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Positive, Negative, or Zero - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Check Positive, Negative, or Zero</h1>
+    <p class="program-desc">Determines whether an entered numeric value is positive, negative, or zero.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="input-group"><label>Enter Any Real Number</label><input type="number" id="numSignInput" class="input-field" value="-12.5" step="any"></div>
+     <button class="btn btn-primary" onclick="checkSign()">Check Sign</button>
+     <div class="output-box" id="output">Result will appear here...</div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-05</p>
+  </footer>
+
+  <script>
+
+     function checkSign() {
+       const n = parseFloat(document.getElementById('numSignInput').value);
+       if (isNaN(n)) return;
+       let status = "";
+       if (n > 0) status = "POSITIVE (+)";
+       else if (n < 0) status = "NEGATIVE (-)";
+       else status = "ZERO (0)";
+       document.getElementById('output').textContent = `The number ${n} is ${status}.`;
+     }
+     
+  </script>
+</body>
+</html>

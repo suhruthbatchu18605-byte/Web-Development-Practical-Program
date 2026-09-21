@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count Number of Words in a String - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Count Number of Words in a String</h1>
+    <p class="program-desc">Counts total number of words in a sentence or paragraph.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <textarea id="wordInput" class="input-field" rows="3">Learning JavaScript makes web development interactive and fun!</textarea><button class="btn btn-primary" style="margin-top:1rem;" onclick="countWords()">Count Words</button><div class="output-box" id="output">Result...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-62</p>
+  </footer>
+
+  <script>
+function countWords() { const text = document.getElementById('wordInput').value.trim(); const count = text ? text.split(/\s+/).length : 0; document.getElementById('output').textContent = `Total Words: ${count}`; }
+  </script>
+</body>
+</html>

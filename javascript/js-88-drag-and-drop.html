@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag and Drop Application Using JavaScript - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Drag and Drop Application Using JavaScript</h1>
+    <p class="program-desc">HTML5 Drag and Drop API: move cards between 'To Do' and 'Done' column boards.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="display:flex; gap:1rem;"><div id="col1" ondragover="event.preventDefault()" ondrop="drop(event)" style="flex:1; min-height:120px; background:#0b1120; border:2px dashed var(--border); padding:0.5rem; border-radius:8px;"><div id="dragItem" draggable="true" ondragstart="drag(event)" style="background:#4f46e5; color:white; padding:0.5rem; border-radius:6px; cursor:grab;">Draggable Task Card</div></div><div id="col2" ondragover="event.preventDefault()" ondrop="drop(event)" style="flex:1; min-height:120px; background:#0b1120; border:2px dashed var(--border); padding:0.5rem; border-radius:8px;"></div></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-88</p>
+  </footer>
+
+  <script>
+function drag(e) { e.dataTransfer.setData('text', e.target.id); } function drop(e) { e.preventDefault(); const id = e.dataTransfer.getData('text'); e.target.appendChild(document.getElementById(id)); }
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Functions (ES6) - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Arrow Functions (ES6)</h1>
+    <p class="program-desc">Demonstrates concise arrow function syntax, implicit return, and lexical `this` scoping.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <button class="btn btn-primary" onclick="demoArrow()">Execute Arrow Functions</button>
+     <div class="output-box" id="output">Click to execute...</div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-16</p>
+  </footer>
+
+  <script>
+
+     const add = (a, b) => a + b;
+     const double = n => n * 2;
+     function demoArrow() {
+       const res1 = add(25, 75);
+       const res2 = double(14);
+       document.getElementById('output').textContent = `const add = (a, b) => a + b;  -> add(25, 75) = ${res1}\nconst double = n => n * 2;   -> double(14) = ${res2}`;
+     }
+     
+  </script>
+</body>
+</html>

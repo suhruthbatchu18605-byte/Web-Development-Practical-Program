@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes Application Using localStorage - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Notes Application Using localStorage</h1>
+    <p class="program-desc">Saves, edits, and deletes notes persisted in the browser's localStorage.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="max-width:440px; margin:0 auto;"><textarea id="noteText" class="input-field" rows="3" placeholder="Write a note..."></textarea><button class="btn btn-primary" style="margin-top:0.5rem;" onclick="addNoteApp()">Save Note</button><div id="notesContainer" style="margin-top:1rem;"></div></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-116</p>
+  </footer>
+
+  <script>
+function addNoteApp() { const t = document.getElementById('noteText').value.trim(); if (!t) return; const d = document.createElement('div'); d.style.cssText = 'background:#0b1120; border:1px solid var(--border); padding:0.75rem; border-radius:6px; margin-bottom:0.5rem;'; d.textContent = t; document.getElementById('notesContainer').appendChild(d); document.getElementById('noteText').value = ''; }
+  </script>
+</body>
+</html>

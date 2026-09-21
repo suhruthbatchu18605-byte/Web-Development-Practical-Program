@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Shopping Cart Mini Project - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Simple Shopping Cart Mini Project</h1>
+    <p class="program-desc">Interactive product catalog with cart summary, item count, and price totals.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="display:flex; gap:1rem;"><div style="flex:1;"><button class="btn" onclick="addShopItem('Keyboard', 49.99)">+ Keyboard ($49.99)</button><br><br><button class="btn" onclick="addShopItem('Headphones', 79.99)">+ Headphones ($79.99)</button></div><div style="flex:1;"><div class="output-box" id="output">Total: $0.00 (0 items)</div></div></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-115</p>
+  </footer>
+
+  <script>
+let shopTotal = 0, shopCount = 0; function addShopItem(name, price) { shopTotal += price; shopCount++; document.getElementById('output').textContent = `Cart: ${shopCount} item(s)\nTotal: $${shopTotal.toFixed(2)}`; }
+  </script>
+</body>
+</html>

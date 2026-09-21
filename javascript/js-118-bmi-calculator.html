@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Body Mass Index (BMI) Calculator - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Body Mass Index (BMI) Calculator</h1>
+    <p class="program-desc">Calculates BMI from weight (kg) and height (cm) and categorizes underweight, normal, or overweight.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="display:flex; gap:1rem; max-width:360px; margin:0 auto;"><input type="number" id="bmiW" class="input-field" placeholder="Weight (kg)" value="70"><input type="number" id="bmiH" class="input-field" placeholder="Height (cm)" value="175"></div><div style="text-align:center; margin-top:0.75rem;"><button class="btn btn-primary" onclick="calcBMI()">Compute BMI</button></div><div class="output-box" id="output">Result...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-118</p>
+  </footer>
+
+  <script>
+function calcBMI() { const w = parseFloat(document.getElementById('bmiW').value); const h = parseFloat(document.getElementById('bmiH').value) / 100; const bmi = (w / (h * h)).toFixed(1); let cat = 'Normal'; if (bmi < 18.5) cat = 'Underweight'; else if (bmi >= 25) cat = 'Overweight'; document.getElementById('output').textContent = `BMI: ${bmi} (${cat})`; }
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart Using localStorage - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Shopping Cart Using localStorage</h1>
+    <p class="program-desc">Persistent e-commerce cart that saves added products and quantities across sessions.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div class="btn-group"><button class="btn" onclick="addCart('Laptop')">+ Add Laptop</button><button class="btn" onclick="addCart('Mouse')">+ Add Mouse</button><button class="btn btn-danger" onclick="clearCart()">Clear</button></div><div class="output-box" id="output">Cart empty...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-102</p>
+  </footer>
+
+  <script>
+function getCart() { return JSON.parse(localStorage.getItem('cart_demo') || '[]'); } function addCart(item) { const c = getCart(); c.push(item); localStorage.setItem('cart_demo', JSON.stringify(c)); showCart(); } function clearCart() { localStorage.removeItem('cart_demo'); showCart(); } function showCart() { const c = getCart(); document.getElementById('output').textContent = 'Cart Items (' + c.length + '):\n' + c.join(', '); } showCart();
+  </script>
+</body>
+</html>

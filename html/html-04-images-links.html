@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Images and Hyperlinks - HTML Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to HTML Programs</a>
+    </div>
+    <h1>HTML Images and Hyperlinks</h1>
+    <p class="program-desc">Demonstrates embedding images (&lt;img&gt;) with alt, title, and dimensions, internal links, external links with target='_blank', and mailto links.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+
+      <div class="demo-card">
+        <h2 class="demo-title">1. Embedded Images with Attributes</h2>
+        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
+          <div style="flex: 1; min-width: 260px; background: #0b1120; padding: 1rem; border-radius: 8px; border: 1px solid var(--border); text-align: center;">
+            <svg width="100%" height="160" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="border-radius: 6px; background: linear-gradient(135deg, #3b82f6, #8b5cf6);">
+              <circle cx="200" cy="100" r="60" fill="rgba(255,255,255,0.2)" />
+              <text x="200" y="108" fill="#ffffff" font-size="20" font-family="sans-serif" text-anchor="middle" font-weight="bold">Sample SVG Graphic</text>
+            </svg>
+            <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-muted);">Vector Image with Responsive Width and Height</p>
+          </div>
+        </div>
+
+        <h2 class="demo-title">2. Hyperlinks Demonstration</h2>
+        <ul style="line-height: 2; padding-left: 1.5rem;">
+          <li><strong>Internal Page Link:</strong> <a href="../index.html" style="color: #38bdf8; text-decoration: underline;">Return to Home Dashboard</a></li>
+          <li><strong>Listing Link:</strong> <a href="index.html" style="color: #38bdf8; text-decoration: underline;">Back to HTML Programs List</a></li>
+          <li><strong>External Link (New Tab):</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; text-decoration: underline;">MDN Web Docs - HTML Reference &nearr;</a></li>
+          <li><strong>Email Link (Mailto):</strong> <a href="mailto:student@university.edu?subject=Practical%20Lab%20Submission" style="color: #38bdf8; text-decoration: underline;">Email Lab Instructor</a></li>
+        </ul>
+      </div>
+
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to HTML Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; HTML Programs Section &bull; HTML-04</p>
+  </footer>
+
+</body>
+</html>

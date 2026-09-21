@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock Using JavaScript - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Digital Clock Using JavaScript</h1>
+    <p class="program-desc">Real-time digital clock displaying hours, minutes, seconds, and AM/PM with 1-second intervals.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div style="text-align: center; padding: 2rem 0;">
+       <div id="clockDisplay" style="font-size: 3.5rem; font-weight: 800; font-family: monospace; color: #38bdf8; text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);">
+         00:00:00 AM
+       </div>
+       <p id="dateDisplay" style="color: var(--text-muted); margin-top: 0.5rem; font-size: 1.1rem;"></p>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-26</p>
+  </footer>
+
+  <script>
+
+     function updateClock() {
+       const now = new Date();
+       document.getElementById('clockDisplay').textContent = now.toLocaleTimeString();
+       document.getElementById('dateDisplay').textContent = now.toDateString();
+     }
+     setInterval(updateClock, 1000);
+     updateClock();
+     
+  </script>
+</body>
+</html>

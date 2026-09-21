@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Database Records - Node.js Backend</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+  <style>
+    .code-editor {
+      background: #0b1120;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9rem;
+      color: #38bdf8;
+      overflow-x: auto;
+      white-space: pre;
+      margin-bottom: 1.5rem;
+    }
+    .server-console {
+      background: #000;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 1rem;
+      font-family: monospace;
+      color: #34d399;
+      min-height: 120px;
+      margin-top: 1rem;
+      white-space: pre-wrap;
+    }
+    .method-badge {
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+    .method-GET { background: #065f46; color: #a7f3d0; }
+    .method-POST { background: #1e3a8a; color: #bfdbfe; }
+    .method-PUT, .method-PATCH { background: #78350f; color: #fde68a; }
+    .method-DELETE { background: #881337; color: #fecdd3; }
+  </style>
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to Node.js Programs</a>
+    </div>
+    <h1>Delete Database Records</h1>
+    <p class="program-desc">Removes records from database using findByIdAndDelete or SQL DELETE statement.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+
+    <!-- 1. Node.js Source Code -->
+    <div class="demo-card">
+      <h2 class="demo-title">📄 Node.js Server Code (NODE-36)</h2>
+      <div class="code-editor">const deleted = await Student.findByIdAndDelete('651f8a7e9b01');
+console.log('Deleted record:', deleted);</div>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">
+        Run natively via terminal: <code>node nodejs/node_36.js</code> or test using the live in-browser API console below.
+      </p>
+    </div>
+
+    <!-- 2. Interactive In-Browser Runner / API Simulator -->
+    <div class="demo-card">
+      <h2 class="demo-title">⚡ Interactive Server & API Console</h2>
+      <div style="display: grid; grid-template-columns: 120px 1fr auto; gap: 0.75rem; margin-bottom: 1rem;">
+        <select id="httpMethod" class="input-field" style="font-weight: bold;">
+          <option value="GET" >GET</option>
+          <option value="POST" >POST</option>
+          <option value="PUT" >PUT</option>
+          <option value="PATCH" >PATCH</option>
+          <option value="DELETE" selected>DELETE</option>
+        </select>
+        <input type="text" id="endpointUrl" class="input-field" value="/api/db/students/651f8a7e9b01">
+        <button class="btn btn-primary" onclick="runServerRequest()">Send Request &rarr;</button>
+      </div>
+
+      <div class="input-group">
+        <label>Request Body (JSON Payload for POST/PUT/PATCH):</label>
+        <textarea id="reqBody" class="input-field" rows="3">{}</textarea>
+      </div>
+
+      <!-- Live Output Tabs -->
+      <div style="margin-top: 1rem;">
+        <label style="font-weight: bold; color: #38bdf8;">Server Response (Status: <span id="resStatus">200 OK</span>):</label>
+        <div class="output-box" id="resOutput">Click 'Send Request' to execute this Node.js endpoint...</div>
+      </div>
+
+      <!-- Live Server Console Terminal -->
+      <div style="margin-top: 1.5rem;">
+        <label style="font-weight: bold; color: #34d399;">📟 Live Node.js Server Terminal Log:</label>
+        <div class="server-console" id="serverLog">[SERVER] Process started with PID 1036\n[SERVER] Server listening on http://localhost:3000\nReady to receive incoming requests...</div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to Node.js Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; Node.js Backend Section &bull; NODE-36</p>
+  </footer>
+
+  <script>
+    const mockData = {
+  "deleted": true,
+  "id": "651f8a7e9b01",
+  "message": "Record successfully removed from database."
+};
+
+    function runServerRequest() {
+      const method = document.getElementById('httpMethod').value;
+      const endpoint = document.getElementById('endpointUrl').value;
+      const body = document.getElementById('reqBody').value;
+      const log = document.getElementById('serverLog');
+      const statusSpan = document.getElementById('resStatus');
+      const resOutput = document.getElementById('resOutput');
+
+      // Update terminal log
+      const time = new Date().toLocaleTimeString();
+      log.textContent += `\n[${time}] --> ${method} ${endpoint}`;
+      if (body.trim() && method !== 'GET') {
+        log.textContent += `\n[PAYLOAD] ${body.replace(/\n/g, ' ')}`;
+      }
+
+      // Simulate network & server processing
+      resOutput.textContent = "Processing request on Node.js server...";
+      setTimeout(() => {
+        let statusCode = 200;
+        let statusText = "200 OK";
+        if (method === 'POST') { statusCode = 201; statusText = "201 Created"; }
+        else if (method === 'DELETE') { statusCode = 200; statusText = "200 OK (Deleted)"; }
+
+        statusSpan.textContent = statusText;
+        statusSpan.style.color = (statusCode === 201 || statusCode === 200) ? '#10b981' : '#ef4444';
+
+        let resObj = mockData;
+        if (body.trim() && method !== 'GET') {
+          try {
+            const parsed = JSON.parse(body);
+            resObj = Object.assign({}, mockData, parsed, { _serverProcessedAt: new Date().toISOString() });
+          } catch (e) {
+            statusCode = 400;
+            statusSpan.textContent = "400 Bad Request";
+            resObj = { error: "Invalid JSON body payload", details: e.message };
+          }
+        }
+
+        resOutput.textContent = JSON.stringify(resObj, null, 2);
+        log.textContent += `\n[${time}] <-- ${statusCode} (${statusText})\n`;
+        log.scrollTop = log.scrollHeight;
+      }, 350);
+    }
+  </script>
+</body>
+</html>

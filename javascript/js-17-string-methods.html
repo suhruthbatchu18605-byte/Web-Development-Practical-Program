@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strings and String Methods - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Strings and String Methods</h1>
+    <p class="program-desc">Demonstrates length, toUpperCase, toLowerCase, slice, replace, split, trim, and indexOf.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="input-group"><label>Input String</label><input type="text" id="strInput" class="input-field" value="  JavaScript Programming is Awesome!  "></div>
+     <button class="btn btn-primary" onclick="demoStrings()">Analyze String</button>
+     <div class="output-box" id="output">Result will appear here...</div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-17</p>
+  </footer>
+
+  <script>
+
+     function demoStrings() {
+       const str = document.getElementById('strInput').value;
+       const trimmed = str.trim();
+       let out = `Original Length: ${str.length}\n`;
+       out += `Trimmed: '${trimmed}' (Length: ${trimmed.length})\n`;
+       out += `Upper Case: ${trimmed.toUpperCase()}\n`;
+       out += `Lower Case: ${trimmed.toLowerCase()}\n`;
+       out += `Slice(0, 10): '${trimmed.slice(0, 10)}'\n`;
+       out += `Replace 'Awesome' -> 'Incredible': '${trimmed.replace('Awesome', 'Incredible')}'`;
+       document.getElementById('output').textContent = out;
+     }
+     
+  </script>
+</body>
+</html>

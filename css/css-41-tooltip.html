@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS-Only Tooltip Using ::before and ::after - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>CSS-Only Tooltip Using ::before and ::after</h1>
+    <p class="program-desc">Pure CSS tooltips positioned on hover with smooth opacity transitions and arrow pointers.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>
+         .tooltip-wrapper { position: relative; display: inline-block; cursor: pointer; }
+         .tooltip-wrapper .tooltip-text { visibility: hidden; opacity: 0; background-color: #0f172a; color: #38bdf8; text-align: center; border-radius: 6px; padding: 6px 12px; position: absolute; z-index: 10; bottom: 125%; left: 50%; transform: translateX(-50%); border: 1px solid var(--border); transition: opacity 0.3s; white-space: nowrap; }
+         .tooltip-wrapper:hover .tooltip-text { visibility: visible; opacity: 1; }
+       </style>
+       <div style="text-align: center; padding: 2rem 0;">
+         <div class="tooltip-wrapper">
+           <button class="btn btn-primary">Hover For Tooltip</button>
+           <span class="tooltip-text">CSS Tooltip Triggered via :hover!</span>
+         </div>
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-41</p>
+  </footer>
+
+</body>
+</html>

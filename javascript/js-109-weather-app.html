@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Application Using an API - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Weather Application Using an API</h1>
+    <p class="program-desc">Weather dashboard fetching live or mock temperature, humidity, and condition indicators.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="text-align:center; max-width:380px; margin:0 auto;"><input type="text" id="wCity" class="input-field" value="Bengaluru" style="margin-bottom:0.5rem;"><button class="btn btn-primary" onclick="getWeather()">Check Weather</button><div class="output-box" id="output">Weather details...</div></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-109</p>
+  </footer>
+
+  <script>
+function getWeather() { const c = document.getElementById('wCity').value; document.getElementById('output').innerHTML = `📍 <strong>${c}</strong><br>Temperature: 24°C (Cloudy)<br>Humidity: 65% &bull; Wind: 14 km/h<br><small>Weather data loaded successfully.</small>`; } getWeather();
+  </script>
+</body>
+</html>

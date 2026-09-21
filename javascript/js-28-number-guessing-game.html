@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Number Guessing Game</h1>
+    <p class="program-desc">Interactive number guessing game between 1 and 100 with hints and attempt counter.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div style="max-width: 400px; margin: 0 auto; text-align: center;">
+       <p style="color: var(--text-muted); margin-bottom: 1rem;">Guess a secret number between 1 and 100!</p>
+       <div class="input-group">
+         <input type="number" id="guessInput" class="input-field" min="1" max="100" placeholder="Enter guess (1-100)">
+       </div>
+       <button class="btn btn-primary" onclick="submitGuess()">Submit Guess</button>
+       <button class="btn btn-secondary" onclick="resetGuessGame()">New Game</button>
+       <div class="output-box" id="guessOutput">Make your first guess!</div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-28</p>
+  </footer>
+
+  <script>
+
+     let secret = Math.floor(Math.random() * 100) + 1;
+     let attempts = 0;
+     function submitGuess() {
+       const g = parseInt(document.getElementById('guessInput').value);
+       if (isNaN(g)) return;
+       attempts++;
+       const out = document.getElementById('guessOutput');
+       if (g === secret) {
+         out.innerHTML = `<strong style="color: #10b981;">🎉 Correct! You found ${secret} in ${attempts} attempts!</strong>`;
+       } else if (g < secret) {
+         out.textContent = `Too Low! Try a higher number. (Attempts: ${attempts})`;
+       } else {
+         out.textContent = `Too High! Try a lower number. (Attempts: ${attempts})`;
+       }
+     }
+     function resetGuessGame() {
+       secret = Math.floor(Math.random() * 100) + 1;
+       attempts = 0;
+       document.getElementById('guessInput').value = '';
+       document.getElementById('guessOutput').textContent = 'Game reset! Enter a new guess.';
+     }
+     
+  </script>
+</body>
+</html>

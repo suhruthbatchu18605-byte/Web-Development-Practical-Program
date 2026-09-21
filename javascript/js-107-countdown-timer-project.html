@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer Mini Project - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Countdown Timer Mini Project</h1>
+    <p class="program-desc">Countdown timer supporting custom durations and preset quick-buttons (1 min, 5 min).</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="text-align:center; max-width:350px; margin:0 auto;"><div id="cdProjDisp" style="font-size:3rem; font-family:monospace; color:#f59e0b; margin-bottom:1rem;">01:00</div><div class="btn-group" style="justify-content:center;"><button class="btn" onclick="setCDP(60)">1 Min</button><button class="btn" onclick="setCDP(300)">5 Min</button><button class="btn btn-success" onclick="startCDP()">Start</button></div></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-107</p>
+  </footer>
+
+  <script>
+let cdpSecs = 60, cdpT = null; function setCDP(s) { cdpSecs = s; renderCDP(); } function renderCDP() { const m = String(Math.floor(cdpSecs/60)).padStart(2,'0'); const s = String(cdpSecs%60).padStart(2,'0'); document.getElementById('cdProjDisp').textContent = `${m}:${s}`; } function startCDP() { clearInterval(cdpT); cdpT = setInterval(() => { if (cdpSecs > 0) { cdpSecs--; renderCDP(); } else { clearInterval(cdpT); alert('Timer Complete!'); } }, 1000); }
+  </script>
+</body>
+</html>

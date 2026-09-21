@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Demonstration - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>CSS Selectors Demonstration</h1>
+    <p class="program-desc">Demonstrates element, class, ID, attribute, and pseudo-class selectors with visual style applications.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card">
+       <style>
+         p.highlight-text { color: #f43f5e; font-weight: 600; }
+         #unique-header { color: #a855f7; border-bottom: 2px dashed #a855f7; padding-bottom: 0.5rem; }
+         input[type="text"].custom-input { border: 2px solid #3b82f6; background: #0b1120; color: #fff; padding: 0.5rem; border-radius: 6px; }
+       </style>
+       <h3 id="unique-header">ID Selector (#unique-header)</h3>
+       <p class="highlight-text">Class Selector (.highlight-text on &lt;p&gt;)</p>
+       <input type="text" class="custom-input" value="Attribute Selector [type='text']" readonly>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-02</p>
+  </footer>
+
+</body>
+</html>

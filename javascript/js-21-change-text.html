@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Text Using JavaScript - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Change Text Using JavaScript</h1>
+    <p class="program-desc">Modifies textContent and innerHTML of heading and paragraph elements dynamically.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <h3 id="targetHeading" style="color: #f8fafc; margin-bottom: 0.5rem;">Original Heading Text</h3>
+     <p id="targetPara" style="color: var(--text-muted); margin-bottom: 1.5rem;">This is the original paragraph content before JavaScript execution.</p>
+     <button class="btn btn-primary" onclick="changeText()">Change Text</button>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-21</p>
+  </footer>
+
+  <script>
+
+     function changeText() {
+       document.getElementById('targetHeading').textContent = "Updated via JavaScript textContent!";
+       document.getElementById('targetPara').innerHTML = "Paragraph successfully changed at " + new Date().toLocaleTimeString() + " with <strong style='color: #10b981;'>rich HTML formatting</strong>.";
+     }
+     
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marks and Grade Calculator - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Student Marks and Grade Calculator</h1>
+    <p class="program-desc">Calculates average percentage and assigns letter grade (A+, A, B, C, F).</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="max-width:360px; margin:0 auto;"><input type="text" id="marksInput" class="input-field" value="85, 92, 78, 88" placeholder="Subject marks (comma separated)"><button class="btn btn-primary" style="margin-top:0.75rem;" onclick="calcGrade()">Calculate Grade</button><div class="output-box" id="output">Result...</div></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-114</p>
+  </footer>
+
+  <script>
+function calcGrade() { const marks = document.getElementById('marksInput').value.split(',').map(s => parseFloat(s.trim())).filter(n => !isNaN(n)); const sum = marks.reduce((a, b) => a + b, 0); const avg = sum / marks.length; let grade = 'F'; if (avg >= 90) grade = 'A+'; else if (avg >= 80) grade = 'A'; else if (avg >= 70) grade = 'B'; else if (avg >= 60) grade = 'C'; document.getElementById('output').textContent = `Average: ${avg.toFixed(1)}% | Grade: ${grade}`; }
+  </script>
+</body>
+</html>

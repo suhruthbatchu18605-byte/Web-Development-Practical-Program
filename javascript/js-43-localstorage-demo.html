@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store and Retrieve Data with localStorage - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Store and Retrieve Data with localStorage</h1>
+    <p class="program-desc">setItem, getItem, removeItem, and clear methods with real-time browser storage inspector.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="display:flex; gap:0.5rem; margin-bottom:1rem;"><input type="text" id="lsKey" class="input-field" placeholder="Key"><input type="text" id="lsVal" class="input-field" placeholder="Value"></div><div class="btn-group"><button class="btn" onclick="saveLS()">Save</button><button class="btn btn-secondary" onclick="loadLS()">Load</button><button class="btn btn-danger" onclick="clearLS()">Clear</button></div><div class="output-box" id="output">localStorage preview...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-43</p>
+  </footer>
+
+  <script>
+function saveLS() { localStorage.setItem(document.getElementById('lsKey').value, document.getElementById('lsVal').value); document.getElementById('output').textContent = "Saved to localStorage!"; } function loadLS() { const val = localStorage.getItem(document.getElementById('lsKey').value); document.getElementById('output').textContent = `Retrieved: ${val}`; } function clearLS() { localStorage.clear(); document.getElementById('output').textContent = "localStorage cleared."; }
+  </script>
+</body>
+</html>

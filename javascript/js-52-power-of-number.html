@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate Power of a Number (Base^Exponent) - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Calculate Power of a Number (Base^Exponent)</h1>
+    <p class="program-desc">Calculates base raised to power exponent using loop and Math.pow().</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="display:flex; gap:1rem;"><input type="number" id="powBase" class="input-field" value="2" placeholder="Base"><input type="number" id="powExp" class="input-field" value="8" placeholder="Exponent"></div><button class="btn btn-primary" style="margin-top:1rem;" onclick="calcPower()">Calculate Power</button><div class="output-box" id="output">Result...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-52</p>
+  </footer>
+
+  <script>
+function calcPower() { const b = parseFloat(document.getElementById('powBase').value); const e = parseFloat(document.getElementById('powExp').value); document.getElementById('output').textContent = `${b}^${e} = ${Math.pow(b, e)}`; }
+  </script>
+</body>
+</html>

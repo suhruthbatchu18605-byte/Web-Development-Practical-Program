@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequency of Each Element in an Array - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Frequency of Each Element in an Array</h1>
+    <p class="program-desc">Calculates the occurrence count of each item in an array.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <input type="text" id="freqArrInput" class="input-field" value="apple, banana, apple, orange, banana, apple"><button class="btn btn-primary" style="margin-top:1rem;" onclick="countFreq()">Count Frequencies</button><div class="output-box" id="output">Result...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-57</p>
+  </footer>
+
+  <script>
+function countFreq() { const items = document.getElementById('freqArrInput').value.split(',').map(s => s.trim()); const freq = {}; items.forEach(i => freq[i] = (freq[i] || 0) + 1); document.getElementById('output').textContent = JSON.stringify(freq, null, 2); }
+  </script>
+</body>
+</html>

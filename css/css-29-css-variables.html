@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables (Custom Properties) - CSS Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs</a>
+    </div>
+    <h1>CSS Variables (Custom Properties)</h1>
+    <p class="program-desc">Live dynamic theming using CSS custom properties (--main-theme, --theme-accent) with button color switches.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div class="demo-card" id="theme-card-demo">
+       <style>
+         :root { --demo-theme: #4f46e5; }
+         .var-box { background: var(--demo-theme); color: white; padding: 2rem; border-radius: 8px; text-align: center; transition: background 0.3s; }
+       </style>
+       <div class="var-box" id="var-target">Background controlled via var(--demo-theme)</div>
+       <div style="display: flex; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
+         <button class="btn" style="background: #4f46e5;" onclick="document.getElementById('var-target').style.background = '#4f46e5'">Indigo</button>
+         <button class="btn" style="background: #059669;" onclick="document.getElementById('var-target').style.background = '#059669'">Emerald</button>
+         <button class="btn" style="background: #dc2626;" onclick="document.getElementById('var-target').style.background = '#dc2626'">Crimson</button>
+       </div>
+     </div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to CSS Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; CSS Programs Section &bull; CSS-29</p>
+  </footer>
+
+</body>
+</html>

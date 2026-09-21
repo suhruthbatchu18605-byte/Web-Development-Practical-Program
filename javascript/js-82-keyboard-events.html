@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard Events (keydown, keyup, key) - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Keyboard Events (keydown, keyup, key)</h1>
+    <p class="program-desc">Logs keyboard input, keyCode, key, and modifiers in real-time.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <input type="text" id="keyInput" class="input-field" placeholder="Type here to capture keyboard events..."><div class="output-box" id="output">Press any key...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-82</p>
+  </footer>
+
+  <script>
+document.getElementById('keyInput').addEventListener('keydown', e => { document.getElementById('output').textContent = `Key: '${e.key}' | Code: '${e.code}' | Alt: ${e.altKey} | Ctrl: ${e.ctrlKey} | Shift: ${e.shiftKey}`; });
+  </script>
+</body>
+</html>

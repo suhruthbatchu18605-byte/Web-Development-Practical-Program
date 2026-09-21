@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Largest of Three Numbers - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Largest of Three Numbers</h1>
+    <p class="program-desc">Determines the largest number among three user inputs using conditional operators.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      
+     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+       <div class="input-group"><label>Number 1</label><input type="number" id="n1" class="input-field" value="28"></div>
+       <div class="input-group"><label>Number 2</label><input type="number" id="n2" class="input-field" value="95"></div>
+       <div class="input-group"><label>Number 3</label><input type="number" id="n3" class="input-field" value="63"></div>
+     </div>
+     <button class="btn btn-primary" onclick="findLargest()">Find Largest</button>
+     <div class="output-box" id="output">Click to find largest number...</div>
+     
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-03</p>
+  </footer>
+
+  <script>
+
+     function findLargest() {
+       const a = parseFloat(document.getElementById('n1').value);
+       const b = parseFloat(document.getElementById('n2').value);
+       const c = parseFloat(document.getElementById('n3').value);
+       const max = Math.max(a, b, c);
+       document.getElementById('output').textContent = `Among [${a}, ${b}, ${c}], the largest number is: ${max}`;
+     }
+     
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swap Two Numbers - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Swap Two Numbers</h1>
+    <p class="program-desc">Demonstrates swapping two variables using a temporary variable and using arithmetic destructuring.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="display:flex; gap:1rem;"><input type="number" id="swapA" class="input-field" value="5"><input type="number" id="swapB" class="input-field" value="10"></div><button class="btn btn-primary" style="margin-top:1rem;" onclick="swapNums()">Swap Numbers</button><div class="output-box" id="output">Result...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-46</p>
+  </footer>
+
+  <script>
+function swapNums() { let a = parseInt(document.getElementById('swapA').value); let b = parseInt(document.getElementById('swapB').value); [a, b] = [b, a]; document.getElementById('output').textContent = `After swap: A = ${a}, B = ${b}`; }
+  </script>
+</body>
+</html>

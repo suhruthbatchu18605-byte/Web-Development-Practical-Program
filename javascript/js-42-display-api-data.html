@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display API Data Dynamically on Webpage - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Display API Data Dynamically on Webpage</h1>
+    <p class="program-desc">Fetches and dynamically renders multiple user cards from an API into DOM elements.</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <button class="btn btn-primary" onclick="renderUsers()">Load User Cards</button><div id="userCardsGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;"></div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-42</p>
+  </footer>
+
+  <script>
+async function renderUsers() { const grid = document.getElementById('userCardsGrid'); grid.innerHTML = 'Loading...'; try { const res = await fetch('https://jsonplaceholder.typicode.com/users?_limit=3'); const users = await res.json(); grid.innerHTML = users.map(u => `<div style="background:#0b1120; border:1px solid var(--border); padding:1rem; border-radius:8px;"><h4 style="color:#38bdf8;">${u.name}</h4><p style="font-size:0.85rem; color:var(--text-muted);">${u.email}</p></div>`).join(''); } catch (e) { grid.innerHTML = '<div style="padding:1rem; background:#0b1120;">Offline fallback rendered.</div>'; } }
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Least Common Multiple (LCM) of Two Numbers - JavaScript Programs</title>
+  <link rel="stylesheet" href="../assets/css/program.css">
+</head>
+<body>
+
+  <!-- Program Header & Navigation -->
+  <header class="program-header">
+    <div class="program-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <span class="nav-sep">&rsaquo;</span>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs</a>
+    </div>
+    <h1>Least Common Multiple (LCM) of Two Numbers</h1>
+    <p class="program-desc">Computes LCM using formula LCM(a, b) = (a * b) / GCD(a, b).</p>
+  </header>
+
+  <!-- Main Program Demonstration -->
+  <main class="program-container">
+    <div class="demo-card">
+      <h2 class="demo-title">Demonstration Output</h2>
+      <div style="display:flex; gap:1rem;"><input type="number" id="lcmA" class="input-field" value="12"><input type="number" id="lcmB" class="input-field" value="18"></div><button class="btn btn-primary" style="margin-top:1rem;" onclick="calcLCM()">Compute LCM</button><div class="output-box" id="output">Result...</div>
+    </div>
+  </main>
+
+  <!-- Program Footer -->
+  <footer class="program-footer">
+    <div class="footer-nav">
+      <a href="../index.html" class="nav-btn">🏠 Home Dashboard</a>
+      <a href="index.html" class="nav-btn">⬅ Back to JavaScript Programs List</a>
+    </div>
+    <p>&copy; Practical Programs Portfolio &bull; JavaScript Programs Section &bull; JS-48</p>
+  </footer>
+
+  <script>
+function calcLCM() { const a = parseInt(document.getElementById('lcmA').value); const b = parseInt(document.getElementById('lcmB').value); function gcd(x, y) { return y === 0 ? x : gcd(y, x % y); } const lcm = Math.abs(a * b) / gcd(a, b); document.getElementById('output').textContent = `LCM(${a}, ${b}) = ${lcm}`; }
+  </script>
+</body>
+</html>
